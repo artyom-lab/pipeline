@@ -361,14 +361,14 @@ body {
   .o-hidden {
     overflow: hidden; } }
 
-@media (min-width: 1650px) {
+@media (min-width: 1200px) {
   .w-1550 {
-    max-width: 1400px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto; } }
 .w-1550.display-flex {
   display: flex; }
-  @media (max-width: 1949.98px) {
+  @media (max-width: 1199.98px) {
     .w-1550.display-flex {
       display: block; } }
 
