@@ -64,12 +64,17 @@ body
 		padding-left: 4px
 		padding-right: 4px
 
-.row-12
-	margin-left: -12px
-	margin-right: -12px
+.row-8
+	margin-left: -8px
+	margin-right: -8px
 	> [class*='col']
-		padding-left: 12px
-		padding-right: 12px
+		padding-left: 8px
+		padding-right: 8px
+
+.h3, h3
+	font-size: 21px
+	font-weight: bold 
+	color: #222222
 
 .h6, h6
 	font-size: 14px
@@ -300,28 +305,20 @@ body
 	@media (max-width: 767.98px)
 		transform: translateX(55px) !important
 
-
-
-
-
-
-
-
-
 .form-check-label
 	cursor: pointer
-	margin-bottom: 2px
+	margin-bottom: 8px
 	.title 
 		font-size: 14px
 	input[type="radio"]
 		display: none
 		~ .f
 			display: inline-block
-			width: 14px
-			height: 14px
+			width: 16px
+			height: 16px
 			cursor: pointer
-			margin-right: 2px
-			border: 1px solid $color-blue
+			margin-right: 6px
+			border: 1px solid #d5d5d5
 			border-radius: 100px
 			position: relative
 		&:checked
@@ -329,10 +326,11 @@ body
 				transition: $transition
 				background: $color-blue
 				color: $color-blue
+				border: 1px solid $color-blue
 				&:before 
 					content: ''
-					width: 10px
-					height: 10px
+					width: 12px
+					height: 12px
 					position: absolute
 					top: 50%
 					left: 50%
@@ -341,22 +339,25 @@ body
 					border-radius: 100px
 
 .content
-	padding: 22px 30px 80px
+	padding: 32px 30px 80px
 	@media (max-width: 991.98px)
-		padding: 22px 20px 80px
+		padding: 32px 20px 80px
 	@media (max-width: 575.98px)
-		padding: 22px 15px 80px
+		padding: 32px 15px 80px
 
 .cart
 	background: #FFF
-	border-radius: 16px
+	border-radius: 8px
 	box-shadow: 0 1px 3px 0px rgba(0, 0, 0, .35)
 	overflow: hidden
 
 .cart-content
 	padding: 30px
 	@media (max-width: 575.98px)
-		padding: 15px
+		padding: 30px 15px
+
+.mb-40
+	margin-bottom: 40px
 
 .o-hidden
 	@media (max-width: 991.98px)
@@ -364,7 +365,7 @@ body
 
 .w-1550
 	@media (min-width: 1200px)
-		max-width: 800px
+		max-width: 860px
 		margin-left: auto
 		margin-right: auto
 	&.display-flex 
@@ -373,32 +374,93 @@ body
 			display: block 
 
 .add 
+	position: relative
 	.form-control
-		padding-top: 4px
-		padding-bottom: 4px
+		padding: 4px 36px 4px 12px
 		height: 45px
 		border-radius: 8px
-		border: 0
-		box-shadow: 0 1px 3px 0px rgba(0, 0, 0, .35)
+		border: 1px solid #e1e3ec
 		font-size: 14px
-	.form-textarea
-		height: 125px
-		resize: none
-		padding: 12px
-		&.form-textarea-big
-			height: 400px
+		&:focus
+			box-shadow: none
+	.arrows 
+		position: absolute 
+		right: 16px
+		top: 50%
+		transform: translateY(-50%)
 
 .btn-create
-	background: #00a1fe
+	background: $color-blue
 	color: #FFF
-	border: 0
-	border-radius: 8px
+	border: 2px solid $color-blue
+	border-radius: 6px
 	font-size: 14px
-	padding: 12px 24px
+	padding: 10px 18px
 	transition: $transition
 	&:hover
 		color: #FFF
-		opacity: .7
+		opacity: .8
+	&:focus
+		box-shadow: none
+	&.btn-story
+		color: $color-blue
+		font-weight: bold
+		background: transparent
+		&:hover
+			opacity: 1
+			background: $color-blue
+			color: #FFF
 	&.btn-cancel
-		background: #e10700
+		border: 2px solid #ff0050
+		color: #ff0050
+		font-weight: bold
+		background: transparent
+		&:hover
+			opacity: 1
+			background: #ff0050
+			color: #FFF
 
+.message-box
+	border: 1px solid #e0e2ec
+	border-radius: 8px
+	padding: 0 18px
+
+.textarea-message
+	border: 0
+	min-height: 220px
+	resize: none
+	padding: 12px 0
+	border-radius: 0
+	border-top: 2px solid #e0e2ec
+	font-size: 14px
+	&:focus 
+		box-shadow: none
+		border-color: #e0e2ec
+
+.message-header
+	padding-top: 8px
+	
+.message-pill
+	min-height: 30px
+	display: inline-block
+	font-size: 0
+	overflow: hidden
+	margin-bottom: 8px
+	@media (max-width: 575.98px)
+		min-height: 26px
+	.pill
+		min-width: 30px
+		height: 30px
+		color: #222222
+		font-size: 14px
+		vertical-align: middle
+		text-align: center
+		display: inline-block
+		line-height: 30px
+		transition: $transition
+		@media (max-width: 575.98px)
+			min-width: 26px
+			height: 26px
+			line-height: 26px
+		&.disabled
+			opacity: .5

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pipeline</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -351,75 +351,224 @@
 
 	<section class="section w-1550 display-flex">
 		<div class="content">
-			<div class="cart mb-5">
+			<h3 class="mb-3">New Lead</h3>
+			<div class="cart mb-40">
         <div class="cart-content fz-14">
-					<h6 class="mb-3">New Story</h6>
-					<div class="font-weight-bold mb-2">Story Title</div>
-					<div class="mb-2">Add the title of the story</div>
-					<div class="add mb-4">
-						<input type="text" class="form-control" placeholder="">
+					<h6 class="mb-2">Organization Search</h6>
+					<div class="mb-2">Leads are based on news from an Organization. To create a new lead, first search and select the Organization where the news originates from.</div>
+					<div class="add">
+						<input type="text" class="form-control" placeholder="Search for an Organization">
+						<img src="img/arrows.png" alt="" width="10" class="arrows">
 					</div>
-					<div class="font-weight-bold mb-2">Story Teaser</div>
-					<div class="mb-2">Add the story teaser. A teaser should me no more than three sentences long and include the story lede.</div>
-					<div class="add mb-4">
-						<textarea type="text" class="form-control form-textarea"></textarea>
-					</div>
-					<div class="font-weight-bold mb-2">Story Body</div>
-					<div class="mb-2">Add the story body.</div>
-					<div class="add mb-4">
-						<textarea type="text" class="form-control form-textarea form-textarea-big"></textarea>
-					</div>
-					<div class="font-weight-bold mb-2">Story Tags</div>
-					<div class="mb-2">Select a story tag.</div>
-					<div class="form-group">
-	          <label class="form-check-label">       
-	            <input type="radio" name="keywords2">
-	            <span class="align-middle f"></span>
-	            <span class="align-middle title">Beyond Church</span>
-	          </label><br>
-	          <label class="form-check-label">       
-	            <input type="radio" name="keywords2">
-	            <span class="align-middle f"></span>
-	            <span class="align-middle title">Spotlight</span>
-	          </label><br>
-	          <label class="form-check-label">       
-	            <input type="radio" name="keywords2">
-	            <span class="align-middle f"></span>
-	            <span class="align-middle title">The Hub</span>
-	          </label><br>
-	          <label class="form-check-label">       
-	            <input type="radio" name="keywords2">
-	            <span class="align-middle f"></span>
-	            <span class="align-middle title">Editorial</span>
-	          </label><br>
-	          <label class="form-check-label">       
-	            <input type="radio" name="keywords2">
-	            <span class="align-middle f"></span>
-	            <span class="align-middle title">Rethinking Church</span>
-	          </label><br>
-	          <label class="form-check-label">       
-	            <input type="radio" name="keywords2">
-	            <span class="align-middle f"></span>
-	            <span class="align-middle title">Lessons Learned</span>
-	          </label><br>
-	        </div>
-					<div class="font-weight-bold mb-2">Story Image</div>
-					<div class="mb-2">Add an image by drag n drop or selecting the square below and selecting from your desktop. A story image is required even if you are adding a video.</div>
-					<div class="font-weight-bold mb-2">Story Video</div>
-					<div class="mb-2">Add an optional video URL.</div>
-					<div class="add mb-4">
-						<input type="text" class="form-control" placeholder="">
-					</div>	
-					<div class="row row-4 align-items-center">
-						<div class="col-auto">
-							<button class="btn btn-create">Create</button>
+        </div>
+			</div>
+			<div class="cart mb-40">
+        <div class="cart-content fz-14">
+					<h6 class="mb-2">Network & Project</h6>
+					<div class="mb-2">The available Networks and Projects are based on those that the Organization is associated to. If you do not see the correct options, contact your manager.</div>
+					<div class="row row-4 align-items-center mb-3">
+						<div class="col-md-2 font-weight-bold">Network</div>
+						<div class="col-md-10">
+							<div class="add">
+								<input type="text" class="form-control" placeholder="">
+								<img src="img/arrows.png" alt="" width="10" class="arrows">			
+							</div>					
 						</div>
-						<div class="col-auto">
-							<button class="btn btn-create btn-cancel">Cancel</button>
+					</div>
+					<div class="row row-4 align-items-center mb-5">
+						<div class="col-md-2 font-weight-bold">Project</div>
+						<div class="col-md-10">
+							<div class="add">
+								<input type="text" class="form-control" placeholder="">
+								<img src="img/arrows.png" alt="" width="10" class="arrows">			
+							</div>					
+						</div>
+					</div>
+					<h6 class="mb-2">Agency & Opportunity</h6>
+					<div class="mb-2">The available Agencies and Opportunities are based on the selected Network and Project above. If only one Agency and Opportunity is available, it will automatically be selected. If you do not see the correct options, contact your manager.</div>
+					<div class="row row-4 align-items-center mb-3">
+						<div class="col-md-2 font-weight-bold">Agency</div>
+						<div class="col-md-10">
+							<div class="add">
+								<input type="text" class="form-control" placeholder="">
+								<img src="img/arrows.png" alt="" width="10" class="arrows">			
+							</div>					
+						</div>
+					</div>
+					<div class="row row-4 align-items-center mb-3">
+						<div class="col-md-2 font-weight-bold">Opportunity</div>
+						<div class="col-md-10">
+							<div class="add">
+								<input type="text" class="form-control" placeholder="">
+								<img src="img/arrows.png" alt="" width="10" class="arrows">			
+							</div>					
+						</div>
+					</div>
+					<div class="row row-4 align-items-center mb-3">
+						<div class="col-md-2 font-weight-bold">Content Type</div>
+						<div class="col-md-10">
+							<div class="add">
+								<input type="text" class="form-control" placeholder="">
+								<img src="img/arrows.png" alt="" width="10" class="arrows">			
+							</div>					
+						</div>
+					</div>
+					<div class="row row-4 align-items-center">
+						<div class="col-md-2 font-weight-bold">Opportunity Type</div>
+						<div class="col-md-10">
+							<div class="add">
+								<input type="text" class="form-control" placeholder="">
+								<img src="img/arrows.png" alt="" width="10" class="arrows">			
+							</div>					
 						</div>
 					</div>
         </div>
 			</div>
+			<div class="cart mb-40">
+        <div class="cart-content fz-14">
+					<h6 class="mb-2">Urgency</h6>
+					<div class="mb-2">If the story is urgent, select the urgency level. Stories market as urgent may have an increased cost to produce. If the story is not urgent, leave this section blank.</div>
+					<div class="form-group mt-3 mb-0">
+						<div class="row">
+							<div class="col-auto">
+			          <label class="form-check-label row row-4">    
+				          <span class="col-auto">
+				            <input type="radio" name="keywords2">
+				            <span class="align-middle f"></span>	          	
+				          </span>   
+				          <span class="col">
+				            <span class="align-middle title"><span class="font-weight-bold">Time Sensitive</span> - Publish within 12-24 hours if submitting</span>	          
+				          </span>
+			          </label>								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-auto">
+			          <label class="form-check-label row row-4">    
+				          <span class="col-auto">
+				            <input type="radio" name="keywords2">
+				            <span class="align-middle f"></span>	          	
+				          </span>   
+				          <span class="col">
+				            <span class="align-middle title"><span class="font-weight-bold">Breaking News</span> - Publish within 4-12 hours if submitting</span>	          
+				          </span>
+			          </label>								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-auto">
+			          <label class="form-check-label row row-4">    
+				          <span class="col-auto">
+				            <input type="radio" name="keywords2">
+				            <span class="align-middle f"></span>	          	
+				          </span>   
+				          <span class="col">
+				            <span class="align-middle title"><span class="font-weight-bold">Rush</span> - Publish in less than 4 hours</span>	          
+				          </span>
+			          </label>								
+							</div>
+						</div>
+	        </div>
+        </div>
+			</div>
+			<div class="cart mb-40">
+        <div class="cart-content fz-14">
+					<h6 class="mb-2">Instructions & Notes</h6>
+					<div class="mb-2">Include any necessary instructions or notes on how the lead should be executed. The writer will see this information when they begin to write the story.</div>
+					<div class="message-box">
+						<div class="message-header">
+							<div class="row row-4 justify-content-md-between">
+								<div class="col-auto fz-0">
+									<div class="message-pill">
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-b"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-italic"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-underline"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-a"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-auto fz-0">
+									<div class="message-pill">
+										<a href="#!" class="pill">
+											<i class="fa-sharp fa-solid fa-align-left"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-sharp fa-solid fa-align-center"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-list-ol"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-paragraph"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-auto fz-0">
+									<div class="message-pill">
+										<a href="#!" class="pill">
+											<i class="fa-sharp fa-solid fa-link"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-regular fa-image"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-video"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-sharp fa-solid fa-plus-minus"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-auto fz-0">
+									<div class="message-pill">
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-plus"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-trash"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-arrow-left"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-auto fz-0">
+									<div class="message-pill">
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-rotate-left"></i>
+										</a>
+										<a href="#!" class="pill disabled">
+											<i class="fa-solid fa-rotate-right"></i>
+										</a>
+										<a href="#!" class="pill">
+											<i class="fa-solid fa-ellipsis-vertical"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+          	<textarea class="form-control textarea-message" placeholder="" rows="5"></textarea>
+					</div>
+        </div>
+			</div>
+			<div class="row row-8 align-items-center">
+				<div class="col-auto mb-3">
+					<button class="btn btn-create">Create</button>
+				</div>
+				<div class="col-auto mb-3">
+					<button class="btn btn-create btn-story">Create & go to Story</button>
+				</div>
+				<div class="col-auto mb-3">
+					<button class="btn btn-create btn-cancel">Cancel</button>
+				</div>
+			</div>			
 		</div>
 	</section>
 		
