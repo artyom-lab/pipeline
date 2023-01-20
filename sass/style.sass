@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap')
+
+$transition: .3s
+
+$color-black: #222222
+$color-blue: #1e39a1
+$color-blue-2: #677ac0
+
+* 
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+.text-black 
+	color: #222222 !important
+
+a 
+	text-decoration: none !important
+	transition: $transition
+	&:hover 
+		opacity: .7
+	&.black 
+		color: #000
+		&:hover 
+			color: #000	
+
+body 
+	font-family: 'Roboto', sans-serif
+	background-color: #f6f6f8
+	display: flex
+	color: #222222
+	flex-direction: column
+	min-height: 100vh
+
+.body-dasboard
+	transition: $transition
+	padding-top: 70px
+	@media (min-width: 992px)
+		padding-left: 190px
+	&.menubar-dashboard
+		@media (min-width: 992px)
+			padding-left: 0
+			.sidebar-1
+				margin-left: -190px
+		@media (max-width: 991.98px)
+			overflow: hidden
+			.sidebar-1, .navbar-dashboard, .content
+				transform: translateX(190px)
+
+.sidebar-1, .navbar-dashboard, .content
+	transition: $transition
+
+.fz-0
+	font-size: 0px
+.fz-14
+	font-size: 14px
+
+.row-4
+	margin-left: -4px
+	margin-right: -4px
+	> [class*='col']
+		padding-left: 4px
+		padding-right: 4px
+
+.row-12
+	margin-left: -12px
+	margin-right: -12px
+	> [class*='col']
+		padding-left: 12px
+		padding-right: 12px
+
+.h6, h6
+	font-size: 14px
+	font-weight: bold 
+	color: #222222
+
+.navbar-dashboard
+	background: $color-blue
+	padding: 10px 20px
+	@media (max-width: 767.98px)	
+		padding: 13px 15px
+
+.avatar
+	width: 50px
+	height: 50px
+	border-radius: 8px
+	background-color: #DEDEDE
+	background-size: cover
+	background-position: center center
+	display: block
+	@media (max-width: 767.98px)	
+		width: 36px
+		height: 36px
+
+.form-search
+	position: relative
+	transition: $transition
+	margin-left: 200px
+	@media (max-width: 991.98px)
+		margin-left: 50px
+	@media (min-width: 1950px)
+		width: 1200px
+	&.form-transform
+		margin-left: 50px
+	.form-control
+		width: 100%
+		background: $color-blue-2
+		border: 0
+		height: 50px
+		border-radius: 8px
+		transition: $transition
+		font-size: 14px
+		color: #FFF
+		padding: 8px 40px 8px 22px
+		@media (max-width: 767.98px)
+			height: 36px
+			padding: 8px 32px 8px 12px
+			font-size: 12px
+		&::-webkit-input-placeholder
+			color: #FFF
+		&::-moz-placeholder
+			color: #FFF
+		&:-ms-input-placeholder
+			color: #FFF
+		&:focus
+			box-shadow: none
+	.fa-search
+		position: absolute
+		display: inline-block
+		color: #FFF
+		font-size: 20px	
+		top: 50%
+		transform: translateY(-50%)
+		right: 10px
+		padding: 4px
+		border: 0
+		transition: $transition
+		background: transparent
+		@media (max-width: 767.98px)
+			font-size: 14px
+			right: 6px
+		&:hover 
+			opacity: .7
+
+.sidebar-1
+	position: fixed
+	width: 190px
+	top: 0
+	bottom: 0
+	left: 0
+	max-height: 100vh
+	display: flex
+	flex-direction: column
+	z-index: 1040
+	background-color: #FFF
+	@media (max-width: 991.98px)	
+		left: auto
+		right: 100%
+
+.sidebar-top
+	padding: 22.5px 20px
+	background: $color-blue
+	height: 70px
+	@media (max-width: 767.98px)
+		padding: 18.5px 20px
+		height: 62px
+	.logo 
+		vertical-align: middle
+		img 
+			width: 85px
+
+.sidebar-bottom
+	flex-grow: 1
+	overflow: auto
+	padding: 12px 10px 70px
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, .1)
+	@media (max-width: 991.98px)
+		box-shadow: none
+		border-right: 1px solid #f4f4f4
+	&::-webkit-scrollbar
+		display: none
+	.accordion-wrap
+		padding-bottom: 20px 
+	.block
+		padding: 12px 0
+		@media (max-width: 767.98px)
+			padding: 8px 0
+		.dashboard
+			position: relative
+			display: block
+			color: $color-black
+			font-size: 14px	
+			padding: 0px 10px	
+			.fa-chevron-right
+				position: absolute
+				top: 50%
+				color: $color-black	
+				transform: translateY(-50%)
+				right: 15px
+				transition: $transition
+			.img-box
+				margin: 0 auto
+				max-height: 20px
+				height: 20px
+				width: 20px
+			&:hover, &.active, &[aria-expanded="true"]
+				opacity: 1
+				&[aria-expanded="true"]
+					font-weight: bold
+					.fa-chevron-right
+						transform: translateY(-50%) rotate(90deg)
+				.img-box
+					&.img-box-networks
+						background-image: url(../img/network_color.png) !important
+					&.img-box-objects
+						background-image: url(../img/object_color.png) !important
+					&.img-box-reports
+						background-image: url(../img/reports_color.png) !important
+					&.img-box-content
+						background-image: url(../img/content_color.png) !important
+					&.img-box-admin
+						background-image: url(../img/admin_color.png) !important
+			&.dashboard-link
+				padding-bottom: 8px
+				&:hover
+					font-weight: bold
+
+.new-lead
+	display: block
+	background: $color-blue-2
+	padding: 15px
+	text-align: center
+	color: #FFF
+	text-transform: uppercase
+	font-size: 14px
+	border-radius: 8px
+	font-weight: bold
+	&:hover
+		color: #FFF
+		opacity: 1
+		background: $color-blue
+
+.dashboard-main
+	.img-dashboard
+		text-align: center
+		line-height: 30px
+		width: 30px
+		height: 30px
+		border-radius: 4px
+		background: $color-blue-2
+	&:hover, &[aria-expanded="true"]
+		.img-dashboard
+			background: $color-blue
+
+.bg-img
+	background-size: cover
+	background-position: center center
+	height: auto
+
+.w-30
+	width: 30px
+
+.sandwich
+	color: #FFF
+	display: block
+	cursor: pointer
+	padding: 0
+	border: 0
+	background: transparent
+	transition: $transition
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 4px
+	span, &:before, &:after
+		width: 20px
+		display: block
+		transition: $transition
+		transform-origin: left center
+		border-top: 2px solid
+	&.active
+		&:before
+			transform: translateX(3px) translateY(-1px) rotate(45deg)
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: translateX(3px) translateY(1px) rotate(-45deg)
+	&:hover 
+		opacity: .8
+#sandwich
+	&.active
+		transform: translateX(120px)
+		@media (max-width: 1199.98px)
+			transform: translateX(60px)
+	@media (max-width: 991.98px)
+		transform: translateX(60px) !important
+	@media (max-width: 767.98px)
+		transform: translateX(55px) !important
+
+
+
+
+
+
+
+
+
+.form-check-label
+	cursor: pointer
+	margin-bottom: 2px
+	.title 
+		font-size: 14px
+	input[type="radio"]
+		display: none
+		~ .f
+			display: inline-block
+			width: 14px
+			height: 14px
+			cursor: pointer
+			margin-right: 2px
+			border: 1px solid $color-blue
+			border-radius: 100px
+			position: relative
+		&:checked
+			~ .f
+				transition: $transition
+				background: $color-blue
+				color: $color-blue
+				&:before 
+					content: ''
+					width: 10px
+					height: 10px
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					border: 2px solid #fff
+					border-radius: 100px
+
+.content
+	padding: 22px 30px 80px
+	@media (max-width: 991.98px)
+		padding: 22px 20px 80px
+	@media (max-width: 575.98px)
+		padding: 22px 15px 80px
+
+.cart
+	background: #FFF
+	border-radius: 16px
+	box-shadow: 0 1px 3px 0px rgba(0, 0, 0, .35)
+	overflow: hidden
+
+.cart-content
+	padding: 30px
+	@media (max-width: 575.98px)
+		padding: 15px
+
+.o-hidden
+	@media (max-width: 991.98px)
+		overflow: hidden
+
+.w-1550
+	@media (min-width: 1650px)
+		max-width: 1400px
+		margin-left: auto
+		margin-right: auto
+	&.display-flex 
+		display: flex
+		@media (max-width: 1949.98px)
+			display: block 
+
+.add 
+	.form-control
+		padding-top: 4px
+		padding-bottom: 4px
+		height: 45px
+		border-radius: 8px
+		border: 0
+		box-shadow: 0 1px 3px 0px rgba(0, 0, 0, .35)
+		font-size: 14px
+	.form-textarea
+		height: 125px
+		resize: none
+		padding: 12px
+		&.form-textarea-big
+			height: 400px
+
+.btn-create
+	background: #00a1fe
+	color: #FFF
+	border: 0
+	border-radius: 8px
+	font-size: 14px
+	padding: 12px 24px
+	transition: $transition
+	&:hover
+		color: #FFF
+		opacity: .7
+	&.btn-cancel
+		background: #e10700
+
