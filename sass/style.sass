@@ -2,9 +2,11 @@
 
 $transition: .3s
 
+$color-white: #FFF
 $color-black: #222222
 $color-blue: #1e39a1
 $color-blue-2: #677ac0
+$color-border: #e0e2ec
 
 * 
 	outline: none !important
@@ -14,7 +16,7 @@ img
 	height: auto
 
 .text-black 
-	color: #222222 !important
+	color: $color-black !important
 
 a 
 	text-decoration: none !important
@@ -22,15 +24,15 @@ a
 	&:hover 
 		opacity: .7
 	&.black 
-		color: #000
+		color: $color-black
 		&:hover 
-			color: #000	
+			color: $color-black
 
 body 
 	font-family: 'Roboto', sans-serif
 	background-color: #f6f6f8
 	display: flex
-	color: #222222
+	color: $color-black
 	flex-direction: column
 	min-height: 100vh
 
@@ -74,12 +76,12 @@ body
 .h3, h3
 	font-size: 21px
 	font-weight: bold 
-	color: #222222
+	color: $color-black
 
 .h6, h6
 	font-size: 14px
 	font-weight: bold 
-	color: #222222
+	color: $color-black
 
 .navbar-dashboard
 	background: $color-blue
@@ -117,24 +119,24 @@ body
 		border-radius: 8px
 		transition: $transition
 		font-size: 14px
-		color: #FFF
+		color: $color-white
 		padding: 8px 40px 8px 22px
 		@media (max-width: 767.98px)
 			height: 36px
 			padding: 8px 32px 8px 12px
 			font-size: 12px
 		&::-webkit-input-placeholder
-			color: #FFF
+			color: $color-white
 		&::-moz-placeholder
-			color: #FFF
+			color: $color-white
 		&:-ms-input-placeholder
-			color: #FFF
+			color: $color-white
 		&:focus
 			box-shadow: none
 	.fa-search
 		position: absolute
 		display: inline-block
-		color: #FFF
+		color: $color-white
 		font-size: 20px	
 		top: 50%
 		transform: translateY(-50%)
@@ -159,7 +161,7 @@ body
 	display: flex
 	flex-direction: column
 	z-index: 1040
-	background-color: #FFF
+	background-color: $color-white
 	@media (max-width: 991.98px)	
 		left: auto
 		right: 100%
@@ -237,13 +239,13 @@ body
 	background: $color-blue-2
 	padding: 15px
 	text-align: center
-	color: #FFF
+	color: $color-white
 	text-transform: uppercase
 	font-size: 14px
 	border-radius: 8px
 	font-weight: bold
 	&:hover
-		color: #FFF
+		color: $color-white
 		opacity: 1
 		background: $color-blue
 
@@ -268,7 +270,7 @@ body
 	width: 30px
 
 .sandwich
-	color: #FFF
+	color: $color-white
 	display: block
 	cursor: pointer
 	padding: 0
@@ -335,7 +337,7 @@ body
 					top: 50%
 					left: 50%
 					transform: translate(-50%, -50%)
-					border: 2px solid #fff
+					border: 2px solid $color-white
 					border-radius: 100px
 
 .content
@@ -346,7 +348,7 @@ body
 		padding: 32px 15px 80px
 
 .cart
-	background: #FFF
+	background: $color-white
 	border-radius: 8px
 	box-shadow: 0 1px 3px 0px rgba(0, 0, 0, .35)
 	overflow: hidden
@@ -391,14 +393,14 @@ body
 
 .btn-create
 	background: $color-blue
-	color: #FFF
+	color: $color-white
 	border: 2px solid $color-blue
 	border-radius: 6px
 	font-size: 14px
 	padding: 10px 18px
 	transition: $transition
 	&:hover
-		color: #FFF
+		color: $color-white
 		opacity: .8
 	&:focus
 		box-shadow: none
@@ -409,7 +411,7 @@ body
 		&:hover
 			opacity: 1
 			background: $color-blue
-			color: #FFF
+			color: $color-white
 	&.btn-cancel
 		border: 2px solid #ff0050
 		color: #ff0050
@@ -418,10 +420,10 @@ body
 		&:hover
 			opacity: 1
 			background: #ff0050
-			color: #FFF
+			color: $color-white
 
 .message-box
-	border: 1px solid #e0e2ec
+	border: 1px solid $color-border
 	border-radius: 8px
 	padding: 0 18px
 
@@ -431,11 +433,11 @@ body
 	resize: none
 	padding: 12px 0
 	border-radius: 0
-	border-top: 2px solid #e0e2ec
+	border-top: 2px solid $color-border
 	font-size: 14px
 	&:focus 
 		box-shadow: none
-		border-color: #e0e2ec
+		border-color: $color-border
 
 .message-header
 	padding-top: 8px
@@ -451,7 +453,7 @@ body
 	.pill
 		min-width: 30px
 		height: 30px
-		color: #222222
+		color: $color-black
 		font-size: 14px
 		vertical-align: middle
 		text-align: center

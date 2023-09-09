@@ -15,9 +15,9 @@ a {
   a:hover {
     opacity: 0.7; }
   a.black {
-    color: #000; }
+    color: #222222; }
     a.black:hover {
-      color: #000; }
+      color: #222222; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -339,7 +339,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 2px solid #fff;
+        border: 2px solid #FFF;
         border-radius: 100px; }
 
 .content {
