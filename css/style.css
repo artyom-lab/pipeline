@@ -240,15 +240,15 @@ body {
           .sidebar-bottom .block .dashboard:hover[aria-expanded="true"] .fa-chevron-right, .sidebar-bottom .block .dashboard.active[aria-expanded="true"] .fa-chevron-right, .sidebar-bottom .block .dashboard[aria-expanded="true"][aria-expanded="true"] .fa-chevron-right {
             transform: translateY(-50%) rotate(90deg); }
         .sidebar-bottom .block .dashboard:hover .img-box.img-box-networks, .sidebar-bottom .block .dashboard.active .img-box.img-box-networks, .sidebar-bottom .block .dashboard[aria-expanded="true"] .img-box.img-box-networks {
-          background-image: url(../img/network_color.png) !important; }
+          background-image: url(../img/network_color.webp) !important; }
         .sidebar-bottom .block .dashboard:hover .img-box.img-box-objects, .sidebar-bottom .block .dashboard.active .img-box.img-box-objects, .sidebar-bottom .block .dashboard[aria-expanded="true"] .img-box.img-box-objects {
-          background-image: url(../img/object_color.png) !important; }
+          background-image: url(../img/object_color.webp) !important; }
         .sidebar-bottom .block .dashboard:hover .img-box.img-box-reports, .sidebar-bottom .block .dashboard.active .img-box.img-box-reports, .sidebar-bottom .block .dashboard[aria-expanded="true"] .img-box.img-box-reports {
-          background-image: url(../img/reports_color.png) !important; }
+          background-image: url(../img/reports_color.webp) !important; }
         .sidebar-bottom .block .dashboard:hover .img-box.img-box-content, .sidebar-bottom .block .dashboard.active .img-box.img-box-content, .sidebar-bottom .block .dashboard[aria-expanded="true"] .img-box.img-box-content {
-          background-image: url(../img/content_color.png) !important; }
+          background-image: url(../img/content_color.webp) !important; }
         .sidebar-bottom .block .dashboard:hover .img-box.img-box-admin, .sidebar-bottom .block .dashboard.active .img-box.img-box-admin, .sidebar-bottom .block .dashboard[aria-expanded="true"] .img-box.img-box-admin {
-          background-image: url(../img/admin_color.png) !important; }
+          background-image: url(../img/admin_color.webp) !important; }
       .sidebar-bottom .block .dashboard.dashboard-link {
         padding-bottom: 8px; }
         .sidebar-bottom .block .dashboard.dashboard-link:hover {
