@@ -7,6 +7,7 @@ $color-black: #222222
 $color-blue: #1e39a1
 $color-blue-2: #677ac0
 $color-border: #e0e2ec
+$color-red: #ff0050
 
 * 
 	outline: none !important
@@ -18,9 +19,20 @@ img
 .text-black 
 	color: $color-black !important
 
+.font-weight-bold
+	font-weight: bold
+
+.form-inline 
+	display: flex
+	flex-flow: row wrap
+	align-items: center
+
+.form-group
+	margin-bottom: 16px
+
 a 
 	text-decoration: none !important
-	transition: $transition
+	transition: $transition !important
 	&:hover 
 		opacity: .7
 	&.black 
@@ -50,6 +62,9 @@ body
 			overflow: hidden
 			.sidebar-1, .navbar-dashboard, .content
 				transform: translateX(190px)
+			.content
+				pointer-events: none
+				opacity: .7
 
 .sidebar-1, .navbar-dashboard, .content
 	transition: $transition
@@ -58,6 +73,10 @@ body
 	font-size: 0px
 .fz-14
 	font-size: 14px
+
+.row
+	> [class*="col"]
+		position: relative 
 
 .row-4
 	margin-left: -4px
@@ -401,6 +420,7 @@ body
 	transition: $transition
 	&:hover
 		color: $color-white
+		background: $color-blue
 		opacity: .8
 	&:focus
 		box-shadow: none
@@ -413,13 +433,13 @@ body
 			background: $color-blue
 			color: $color-white
 	&.btn-cancel
-		border: 2px solid #ff0050
-		color: #ff0050
+		border: 2px solid $color-red
+		color: $color-red
 		font-weight: bold
 		background: transparent
 		&:hover
 			opacity: 1
-			background: #ff0050
+			background: $color-red
 			color: $color-white
 
 .message-box

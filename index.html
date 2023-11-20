@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pipeline</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -31,7 +31,7 @@
 			<nav class="accordion-wrap">
 				<div class="accordion" id="accordionExample">
 					<div class="block">
-						<a href="#!" class="dashboard dashboard-main" data-toggle="collapse" data-target="#collapseDashboard">
+						<a href="#!" class="dashboard dashboard-main" data-bs-toggle="collapse" data-bs-target="#collapseDashboard">
 							<div class="row row-4 align-items-center">
 								<div class="col-auto">
 									<div class="img-dashboard">
@@ -42,7 +42,7 @@
 							</div>
 							<i class="fas fa-chevron-right"></i>
 						</a>
-						<div id="collapseDashboard" class="collapse" data-parent="#accordionExample">
+						<div id="collapseDashboard" class="collapse" data-bs-parent="#accordionExample">
 							<div class="mt-2">
 								<a href="#!" class="dashboard dashboard-link">
 									<div class="row row-4 align-items-center">
@@ -84,7 +84,7 @@
 						</div>
 					</div>
 					<div class="block">
-						<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseOne">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseOne">
 							<div class="row row-4 align-items-center">
 								<div class="col-auto">
 									<div class="w-30">
@@ -95,7 +95,7 @@
 							</div>
 							<i class="fas fa-chevron-right"></i>
 						</a>
-						<div id="collapseOne" class="collapse" data-parent="#accordionExample">
+						<div id="collapseOne" class="collapse" data-bs-parent="#accordionExample">
 							<div class="mt-2">
 								<a href="#!" class="dashboard dashboard-link">
 									<div class="row row-4 align-items-center">
@@ -137,7 +137,7 @@
 						</div>
 					</div>
 					<div class="block">
-						<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseTwo">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
 							<div class="row row-4 align-items-center">
 								<div class="col-auto">
 									<div class="w-30">
@@ -148,7 +148,7 @@
 							</div>
 							<i class="fas fa-chevron-right"></i>
 						</a>
-						<div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+						<div id="collapseTwo" class="collapse" data-bs-parent="#accordionExample">
 							<div class="mt-2">
 								<a href="#!" class="dashboard dashboard-link">
 									<div class="row row-4 align-items-center">
@@ -190,7 +190,7 @@
 						</div>
 					</div>
 					<div class="block">
-						<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseThree">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseThree">
 							<div class="row row-4 align-items-center">
 								<div class="col-auto">
 									<div class="w-30">
@@ -201,7 +201,7 @@
 							</div>
 							<i class="fas fa-chevron-right"></i>
 						</a>
-						<div id="collapseThree" class="collapse" data-parent="#accordionExample">
+						<div id="collapseThree" class="collapse" data-bs-parent="#accordionExample">
 							<div class="mt-2">
 								<a href="#!" class="dashboard dashboard-link">
 									<div class="row row-4 align-items-center">
@@ -243,7 +243,7 @@
 						</div>
 					</div>
 					<div class="block">
-						<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseFour">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseFour">
 							<div class="row row-4 align-items-center">
 								<div class="col-auto">
 									<div class="w-30">
@@ -254,7 +254,7 @@
 							</div>
 							<i class="fas fa-chevron-right"></i>
 						</a>
-						<div id="collapseFour" class="collapse" data-parent="#accordionExample">
+						<div id="collapseFour" class="collapse" data-bs-parent="#accordionExample">
 							<div class="mt-2">
 								<a href="#!" class="dashboard dashboard-link">
 									<div class="row row-4 align-items-center">
@@ -296,7 +296,7 @@
 						</div>
 					</div>
 					<div class="block">
-						<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseFive">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseFive">
 							<div class="row row-4 align-items-center">
 								<div class="col-auto">	
 									<div class="w-30">
@@ -307,7 +307,7 @@
 							</div>
 							<i class="fas fa-chevron-right"></i>
 						</a>
-						<div id="collapseFive" class="collapse" data-parent="#accordionExample">
+						<div id="collapseFive" class="collapse" data-bs-parent="#accordionExample">
 							<div class="mt-2">
 								<a href="#!" class="dashboard dashboard-link">
 									<div class="row row-4 align-items-center">
@@ -560,21 +560,21 @@
 			</div>
 			<div class="row row-8 align-items-center">
 				<div class="col-auto mb-3">
-					<button class="btn btn-create">Create</button>
+					<button class="btn btn-primary btn-create">Create</button>
 				</div>
 				<div class="col-auto mb-3">
-					<button class="btn btn-create btn-story">Create & go to Story</button>
+					<button class="btn btn-outline-primary btn-create btn-story">Create & go to Story</button>
 				</div>
 				<div class="col-auto mb-3">
-					<button class="btn btn-create btn-cancel">Cancel</button>
+					<button class="btn btn-outline-danger btn-create btn-cancel">Cancel</button>
 				</div>
 			</div>			
 		</div>
 	</section>
 		
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
   <script src="js/common.js"></script>
 
