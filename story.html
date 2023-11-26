@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pipeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" rel="stylesheet">
+		<link href="https://cdn.tutorialjinni.com/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+	
+<body class="body-dashboard-new" onLoad="starttime()">
+
+	<aside class="sidebar-left">
+		<div class="sidebar-bottom">
+			<nav class="accordion-wrap">
+				<div class="accordion accordion-1" id="accordionExample">
+					<div class="mb-2">
+						<a href="#!" class="dashboard active" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img bg-img" style="background-image: url(img/lead.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Leads</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseOne" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Lead 1</a> 
+								<a href="#!">Lead 2</a> 
+								<a href="#!">Lead 3</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-stories bg-img" style="background-image: url(img/content-black.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Stories</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseTwo" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Story 1</a> 
+								<a href="#!">Story 2</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-print bg-img" style="background-image: url(img/print_bw.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Print</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseThree" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Print 1</a> 
+								<a href="#!">Print 2</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-report bg-img" style="background-image: url(img/reports-black.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Reports</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseFour" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Report 1</a> 
+								<a href="#!">Report 2</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-admin bg-img" style="background-image: url(img/admin_bw.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Admin</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseFive" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Settings</a> 
+								<a href="#!">FAQ</a> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</aside>
+
+	<aside class="sidebar-edit">
+		<div class="edit-box">
+			<div class="pill-id mb-3">Story ID 655193848</div>
+			<div class="nav nav-pills flex-column pills-index mb-4">
+        <a class="nav-link" data-bs-toggle="tab" href="#pill1">
+        	<img src="img/content.webp" alt="" class="align-middle" width="15">
+        	<span class="align-middle ms-1">Stories</span>
+        </a>
+        <a class="nav-link" data-bs-toggle="tab" href="#pill2">
+        	<img src="img/pitch.webp" alt="" class="align-middle" width="15">
+        	<span class="align-middle ms-1">Pitches</span>
+        </a>
+        <a class="nav-link" data-bs-toggle="tab" href="#pill3">
+        	<img src="img/lead.webp" alt="" class="align-middle" width="15">
+        	<span class="align-middle ms-1">Leads</span>
+        </a>
+      </div>
+  	</div>
+		<div class="tab-content" id="v-pills-tabContent">
+
+      <div class="tab-pane fade" id="pill1">
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Source</h5>
+	    			<a href="#!" class="link-status">
+	    				<span>Pitch</span><span class="ms-auto">15</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Lead</span><span class="ms-auto">1412</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Loki</span><span class="ms-auto">1345</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>HAW</span><span class="ms-auto">118,394</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Status</h5>
+	    			<a href="#!" class="link-status active">
+	    				<span class="circle circle-pending me-1">-</span>
+	    				<span>Pending</span>
+	    				<span class="ms-auto">1</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-rejected me-1">R</span>
+	    				<span>Rejected</span>
+	    				<span class="ms-auto">12</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-accepted me-1">L</span>
+	    				<span>Accepted/Lead</span>
+	    				<span class="ms-auto">3</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-write me-1">W</span>
+	    				<span>Write</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-edit me-1">E</span>
+	    				<span>Edit</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-scheduled me-1">S</span>
+	    				<span>Scheduled</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-archived me-1">A</span>
+	    				<span>Archived</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-published me-1">P</span>
+	    				<span>Published</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Project</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Austin American State (1)</option>
+						<option value="1">Houston Chronicle (2)</option>
+						<option value="2">DuPage Policy Journal (2)</option>
+						<option value="3">Madison Record (2)</option>
+						<option value="4">Penn Record (2)</option>
+						<option value="5">Houston Chronicle (2)</option>
+						<option value="6">DuPage Policy Journal (2)</option>
+						<option value="7">Madison Record (2)</option>
+						<option value="8">Penn Record (2)</option>
+						<option value="9">Houston Chronicle (2)</option>
+						<option value="10">DuPage Policy Journal (2)</option>
+						<option value="11">Madison Record (2)</option>
+						<option value="12">Penn Record (2)</option>
+					</select>
+				</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Content Type</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Court Filing (1)</option>
+						<option value="1">Enterprise 1 (2)</option>
+						<option value="2">Enterprise 2 (2)</option>
+						<option value="3">Enterprise 3 (2)</option>
+						<option value="4">Provided Announcement (1)</option>
+						<option value="5">Provided Statement (23)</option>
+						<option value="6">Court Filing (1)</option>
+						<option value="7">Enterprise 1 (2)</option>
+						<option value="8">Enterprise 2 (2)</option>
+						<option value="9">Enterprise 3 (2)</option>
+						<option value="10">Provided Announcement (1)</option>
+						<option value="11">Provided Statement (23)</option>
+					</select>
+				</div>	
+      </div>
+
+      <div class="tab-pane fade" id="pill2">
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Source</h5>
+	    			<a href="#!" class="link-status">
+	    				<span>Pitch</span><span class="ms-auto">25</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Lead</span><span class="ms-auto">2412</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Loki</span><span class="ms-auto">2345</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>HAW</span><span class="ms-auto">218,394</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Status</h5>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-pending me-1">-</span>
+	    				<span>Pending</span>
+	    				<span class="ms-auto">1</span>
+	    			</a>
+	    			<a href="#!" class="link-status active">
+	    				<span class="circle circle-rejected me-1">R</span>
+	    				<span>Rejected</span>
+	    				<span class="ms-auto">12</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-accepted me-1">L</span>
+	    				<span>Accepted/Lead</span>
+	    				<span class="ms-auto">3</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-write me-1">W</span>
+	    				<span>Write</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-edit me-1">E</span>
+	    				<span>Edit</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-scheduled me-1">S</span>
+	    				<span>Scheduled</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-archived me-1">A</span>
+	    				<span>Archived</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-published me-1">P</span>
+	    				<span>Published</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Project</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Austin American State (1)</option>
+						<option value="1">Houston Chronicle (2)</option>
+						<option value="2">DuPage Policy Journal (2)</option>
+						<option value="3">Madison Record (2)</option>
+						<option value="4">Penn Record (2)</option>
+						<option value="5">Houston Chronicle (2)</option>
+						<option value="6">DuPage Policy Journal (2)</option>
+						<option value="7">Madison Record (2)</option>
+						<option value="8">Penn Record (2)</option>
+						<option value="9">Houston Chronicle (2)</option>
+						<option value="10">DuPage Policy Journal (2)</option>
+						<option value="11">Madison Record (2)</option>
+						<option value="12">Penn Record (2)</option>
+					</select>
+				</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Content Type</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Court Filing (1)</option>
+						<option value="1">Enterprise 1 (2)</option>
+						<option value="2">Enterprise 2 (2)</option>
+						<option value="3">Enterprise 3 (2)</option>
+						<option value="4">Provided Announcement (1)</option>
+						<option value="5">Provided Statement (23)</option>
+						<option value="6">Court Filing (1)</option>
+						<option value="7">Enterprise 1 (2)</option>
+						<option value="8">Enterprise 2 (2)</option>
+						<option value="9">Enterprise 3 (2)</option>
+						<option value="10">Provided Announcement (1)</option>
+						<option value="11">Provided Statement (23)</option>
+					</select>
+				</div>
+      </div>
+
+      <div class="tab-pane fade" id="pill3">
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Source</h5>
+	    			<a href="#!" class="link-status">
+	    				<span>Pitch</span><span class="ms-auto">5</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Lead</span><span class="ms-auto">412</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Loki</span><span class="ms-auto">345</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>HAW</span><span class="ms-auto">18,394</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Status</h5>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-pending me-1">-</span>
+	    				<span>Pending</span>
+	    				<span class="ms-auto">1</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-rejected me-1">R</span>
+	    				<span>Rejected</span>
+	    				<span class="ms-auto">12</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-accepted me-1">L</span>
+	    				<span>Accepted/Lead</span>
+	    				<span class="ms-auto">3</span>
+	    			</a>
+	    			<a href="#!" class="link-status active">
+	    				<span class="circle circle-write me-1">W</span>
+	    				<span>Write</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-edit me-1">E</span>
+	    				<span>Edit</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-scheduled me-1">S</span>
+	    				<span>Scheduled</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-archived me-1">A</span>
+	    				<span>Archived</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-published me-1">P</span>
+	    				<span>Published</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Project</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Austin American State (1)</option>
+						<option value="1">Houston Chronicle (2)</option>
+						<option value="2">DuPage Policy Journal (2)</option>
+						<option value="3">Madison Record (2)</option>
+						<option value="4">Penn Record (2)</option>
+						<option value="5">Houston Chronicle (2)</option>
+						<option value="6">DuPage Policy Journal (2)</option>
+						<option value="7">Madison Record (2)</option>
+						<option value="8">Penn Record (2)</option>
+						<option value="9">Houston Chronicle (2)</option>
+						<option value="10">DuPage Policy Journal (2)</option>
+						<option value="11">Madison Record (2)</option>
+						<option value="12">Penn Record (2)</option>
+					</select>
+				</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Content Type</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Court Filing (1)</option>
+						<option value="1">Enterprise 1 (2)</option>
+						<option value="2">Enterprise 2 (2)</option>
+						<option value="3">Enterprise 3 (2)</option>
+						<option value="4">Provided Announcement (1)</option>
+						<option value="5">Provided Statement (23)</option>
+						<option value="6">Court Filing (1)</option>
+						<option value="7">Enterprise 1 (2)</option>
+						<option value="8">Enterprise 2 (2)</option>
+						<option value="9">Enterprise 3 (2)</option>
+						<option value="10">Provided Announcement (1)</option>
+						<option value="11">Provided Statement (23)</option>
+					</select>
+				</div>	
+      </div>
+    </div>
+	</aside>
+
+	<header class="navbar navbar-dashboard navbar-dashboard-new fixed-top">
+		<div class="row g-0 align-items-center w-100">
+			<div class="col-auto">
+				<div class="sidebar-top">
+					<div class="row gx-2 align-items-center my-auto">
+						<div class="col">
+							<a class="logo" href="#!">
+								<img src="img/pipeline.webp" alt="">
+							</a>
+						</div>
+						<div class="col-auto fz-0">
+							<button class="sandwich sandwich-blue d-xl-none" id="sandwich">
+						    <span></span>
+						  </button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<form class="form-search-2">
+		      <input class="form-control" type="text" placeholder="Search for Stories, Leads and Pitches">
+		      <button class="fas fa-search"></button>
+		    </form>
+			</div>
+			<div class="col-auto">
+				<div class="avatar-box">
+					<div class="row g-0 align-items-center justify-content-end my-auto">
+						<div class="col d-none d-xxl-block">
+							<form class="clock row g-0 align-items-center" name="clock">
+								<div class="col text-center">ACME Regional - Illinois</div>
+								<div class="col-auto">
+									<input class="form-control" type="text" name="next">
+								</div>
+							</form>
+						</div>
+						<div class="col-auto">
+							<a href="#!" class="avatar ms-3" style="background-image: url(img/avatar.webp)"></a>
+						</div>
+						<div class="col-auto">
+							<button class="sandwich sandwich-blue ms-3" id="sandwich-2">
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="w-1200 display-flex">
+		<section class="content-new d-flex flex-column flex-grow-1">
+			<div class="steps-box">
+				<div class="row gx-2 align-items-center justify-content-between">
+					<div class="col-auto">
+						<div class="step">
+							<h5 class="mb-1">Pitch</h5>
+							<img src="img/pitch.webp" alt="">
+						</div>
+					</div>
+					<div class="col-auto">
+						<i class="fa-solid fa-chevron-right"></i>
+					</div>
+					<div class="col-auto">
+						<div class="step">
+							<h5 class="mb-1">Lead</h5>
+							<img src="img/lead.webp" alt="">
+						</div>
+					</div>
+					<div class="col-auto">
+						<i class="fa-solid fa-chevron-right"></i>
+					</div>
+					<div class="col-auto">
+						<div class="step">
+							<h5 class="mb-1">Write</h5>
+							<img src="img/write.webp" alt="">
+						</div>
+					</div>
+					<div class="col-auto">
+						<i class="fa-solid fa-chevron-right"></i>
+					</div>
+					<div class="col-auto">
+						<div class="step">
+							<h5 class="mb-1">Edit</h5>
+							<img src="img/edit.webp" alt="">
+						</div>
+					</div>
+					<div class="col-auto">
+						<i class="fa-solid fa-chevron-right"></i>
+					</div>
+					<div class="col-auto">
+						<div class="step">
+							<h5 class="mb-1">Published</h5>
+							<img src="img/published.webp" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-box">
+				<div class="row gx-2 align-items-center">
+					<div class="col-md-2 font-weight-bold">Headline</div>
+					<div class="col-md-10">
+						<textarea class="form-control textarea-edit" rows="2">Organization Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem iusto, tempora suscipit animi, quas veniam illum quisquam</textarea>
+					</div>
+				</div>
+			</div>
+			<div class="content-box">
+				<div class="row gx-2 align-items-center mb-2">
+					<div class="col-sm-3 col-md-2 font-weight-bold">Author</div>
+					<div class="col-sm-6 col-md-3">
+						<input type="text" class="form-control input-edit input-edit-big" value="Chicago City wire reports">
+					</div>
+				</div>
+				<div class="row gx-2 align-items-center mb-2">
+					<div class="col-sm-3 col-md-2 font-weight-bold">Published Date</div>
+					<div class="col-sm-6 col-md-3">
+						<input type="text" class="form-control input-edit input-edit-big" value="10/11/23 @ 1:15 PM">
+					</div>
+				</div>
+				<div class="row gx-2 align-items-center">
+					<div class="col-md-2 font-weight-bold">Teaser</div>
+					<div class="col-md-10">
+						<textarea class="form-control textarea-edit" rows="3"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="content-box">
+				<h6 class="mb-2">Story Body</h6>
+				<div class="message-box">
+					<div class="message-header">
+						<div class="row">
+							<div class="col-auto fz-0">
+								<div class="message-pill">
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-b"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-italic"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-underline"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-a"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-auto fz-0">
+								<div class="message-pill">
+									<a href="#!" class="pill">
+										<i class="fa-sharp fa-solid fa-align-left"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-sharp fa-solid fa-align-center"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-list-ol"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-paragraph"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-auto fz-0">
+								<div class="message-pill">
+									<a href="#!" class="pill">
+										<i class="fa-sharp fa-solid fa-link"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-regular fa-image"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-video"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-sharp fa-solid fa-plus-minus"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-auto fz-0">
+								<div class="message-pill">
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-plus"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-trash"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-arrow-left"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-auto fz-0">
+								<div class="message-pill">
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-rotate-left"></i>
+									</a>
+									<a href="#!" class="pill disabled">
+										<i class="fa-solid fa-rotate-right"></i>
+									</a>
+									<a href="#!" class="pill">
+										<i class="fa-solid fa-ellipsis-vertical"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+        	<textarea class="form-control textarea-message" placeholder="" rows="5"></textarea>
+				</div>
+			</div>
+			<div class="content-box">
+				<h6 class="mb-2">Audio / Video</h6>
+				<div class="mb-2">If the story requires a link to a video (youtube and vimeo are supported) or a link to an audio file (podcast supported), enter the link in the appropriate field. For Video, the file that's supplied will be used in the primary image location instead of the assigned image.</div>
+				<div class="row gx-2 align-items-center mb-2">
+					<div class="col-md-2 font-weight-bold">Audio</div>
+					<div class="col-md-10">
+						<input type="text" class="form-control input-edit input-edit-big" value="-">
+					</div>
+				</div>
+				<div class="row gx-2 align-items-center">
+					<div class="col-md-2 font-weight-bold">Video</div>
+					<div class="col-md-10">
+						<input type="text" class="form-control input-edit input-edit-big" value="-">
+					</div>
+				</div>
+			</div>
+			<div class="content-box">
+				<h6 class="mb-2">Organizations</h6>
+				<div class="mb-2">Include Organizations that are germane to the story. Organizations with a checkmark are ones that fall within the defined geography of the assigned project.</div>
+				<div class="select-box add">
+					<select class="select2" data-placeholder="Add an Organization">
+						<option></option>
+						<option value="0">Organization 1</option>
+						<option value="1">Organization 2</option>
+						<option value="2">Organization 3</option>
+						<option value="3">Organization 4</option>
+						<option value="4">Organization 5</option>
+						<option value="5">Organization 6</option>
+					</select>
+					<img src="img/arrows.webp" alt="" width="10" class="arrows">
+				</div>
+				<div class="box-hide mt-3">
+					<div class="row align-items-center">
+						<div class="col-md mb-2 mb-md-0">
+							<div class="row gx-2">
+								<div class="col-auto">
+									<a href="#!" class="close-box">
+										<img src="img/cross-red.webp" alt="" width="15">					
+									</a>
+								</div>
+								<div class="col">
+									<div class="text-violet"><b class="align-middle">Chicago Public Schools</b> <img src="img/yes.webp" class="align-middle" alt="" width="15"></div>
+									<div>42 W. Madison Street Chicago, IL 60602</div>
+									<div><i>Local Government / Public school districts</i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-box">
+				<h6 class="mb-2">Teams</h6>
+				<div class="mb-2">Include Teams that are germane to the story. Teams with a checkmark are ones that fall within the defined geography of the assigned project.</div>
+				<div class="select-box add">
+					<select class="select2" data-placeholder="Add a Team">
+						<option></option>
+						<option value="0">Team 1</option>
+						<option value="1">Team 2</option>
+						<option value="2">Team 3</option>
+						<option value="3">Team 4</option>
+						<option value="4">Team 5</option>
+						<option value="5">Team 6</option>
+					</select>
+					<img src="img/arrows.webp" alt="" width="10" class="arrows">
+				</div>
+			</div>
+			<div class="content-box">
+				<h6 class="mb-2">Athletes</h6>
+				<div class="mb-2">Include Athletes that are germane to the story. Athletes with a checkmark are ones that fall within the defined geography of the assigned project.</div>
+				<div class="select-box add">
+					<select class="select2" data-placeholder="Add an Athlete">
+						<option></option>
+						<option value="0">Athlete 1</option>
+						<option value="1">Athlete 2</option>
+						<option value="2">Athlete 3</option>
+						<option value="3">Athlete 4</option>
+						<option value="4">Athlete 5</option>
+						<option value="5">Athlete 6</option>
+					</select>
+					<img src="img/arrows.webp" alt="" width="10" class="arrows">
+				</div>
+			</div>
+			<div class="content-box">
+				<h6 class="mb-2">Media</h6>
+				<div class="mb-2">Include any necessary instructions or notes on how the lead should be executed. The writer will see this information when they begin to write the story.</div>
+				<div class="row mb-3">
+					<div class="col-md-4 mb-3 mb-md-0">
+						<div class="image-box">
+							<img src="img/portrait.webp" alt="">
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="row gx-2 align-items-center mb-2">
+							<div class="col-md-2 font-weight-bold">File Name</div>
+							<div class="col-md-10">
+								<input type="text" class="form-control input-edit input-edit-big" value="john_abbott_sr.png">
+							</div>
+						</div>
+						<div class="row gx-2 align-items-center mb-2">
+							<div class="col-md-2 font-weight-bold">Caption</div>
+							<div class="col-md-10">
+								<input type="text" class="form-control input-edit input-edit-big" value="John Abbott Sr.">
+							</div>
+						</div>
+						<div class="row gx-2 align-items-center mb-2">
+							<div class="col-md-2 font-weight-bold">Credit</div>
+							<div class="col-md-10">
+								<input type="text" class="form-control input-edit input-edit-big" value="amhurstcollege.edu">
+							</div>
+						</div>
+						<div class="row gx-2 align-items-center">
+							<div class="col-md-2 font-weight-bold">Placement</div>
+							<div class="col-md-10">
+								<div class="row gx-3 align-items-center">
+									<div class="col-auto">
+										<label class="switch-wrap">
+											<span class="me-2">Primary</span>
+											<input type="checkbox" checked>
+											<span class="lever"></span>
+										</label>
+									</div>
+									<div class="col">
+										<div class="d-flex align-items-center">
+											<span class="me-2">Graf</span>
+											<input type="text" class="form-control input-edit input-edit-big" value="-">
+										</div>
+									</div>
+									<div class="col-sm-auto mt-3 mt-sm-0">
+										<button class="btn btn-danger btn-create btn-remove">Remove</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row align-items-center mb-3">
+					<div class="col-auto">Dimensions=<b>900x506</b></div>
+					<div class="col-auto">Image via Org<i><b>"Chicago Public schools"</b></i></div>
+				</div>
+				<div class="collapse collapse-attr" id="addnew">
+					<div class="pb-4">
+						<div class="row">
+							<div class="col-md-auto">
+							  <div class="drop-zone">
+							    <span class="drop-zone__prompt">Drag-n-drop <br> or <br> Click here to Browse Files</span>
+							    <input type="file" name="myFile" class="drop-zone__input">
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-create" data-bs-toggle="collapse" data-bs-target="#addnew">Add New Media Object</button>
+			</div>
+		</section>
+	</div>
+
+	<aside class="sidebar-right">
+		<div class="archive-box">
+			<button class="btn btn-primary btn-create btn-archive">Archive</button>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Pitch Details</h5>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/pitch.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Pitch ID</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-violet text-end">38725</div>
+				</div>
+			</div>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/content_type.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Type</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-end">Provided Statement</div>
+				</div>
+			</div>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/user.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Pitched by</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-end">Jane Doe</div>
+				</div>
+			</div>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/pitched.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Pitched</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-end">01/16/2023 @ 2:06 pm</div>
+				</div>
+			</div>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/accepted_by.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Accepted by</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-end">Mark Smithville</div>
+				</div>
+			</div>
+			<div class="row gx-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/accepted.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Accepted</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-end">01/16/2023 @ 3:12 pm</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Lead Details</h5>
+			<div class="row gx-2 mb-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/lead.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Lead ID</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-violet text-end">129215414</div>
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/user.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Writer</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Paul Thompson">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/network.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Network</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="LGIS">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/project.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Project</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Chicago City Wire">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/agency.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Agency</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="ACME">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/opp.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Opportunity</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="ACME - Regional - Illinois">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/opp_type.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Opportunity Type</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Baseline">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/content_type.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Content Type</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Provided Statement">
+				</div>
+			</div>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Story Details</h5>
+			<div class="row gx-2 mb-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/content.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Story ID</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-violet text-end">65519384829</div>
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/story_section.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Story Section</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Story Section">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/story_tag.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Story Tag</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Story Tag">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/syndication.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Syndication</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Syndication">
+				</div>
+			</div>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Objects</h5>
+			<div class="row gx-2 mb-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/org.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Organizations</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="text-violet text-end"></div>
+				</div>
+			</div>
+			<div>
+				<div class="text-violet"><b>Chicago Public Schools</b></div>
+				<div>42 W. Madison Street Chicago, IL 60602</div>
+				<div><i>Local Government / Public school districts</i></div>
+			</div>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Media</h5>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/media.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">File Name</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="fz-13">john_abbott_sr.png</div>
+				</div>
+			</div>
+			<div class="row gx-2 mb-3">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/media.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Caption</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="fz-13">John Abbott Sr.</div>
+				</div>
+			</div>
+			<div class="row gx-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/media.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Credit</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="fz-13">amhurstcollege.edu</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Print Details</h5>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/print.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Publication</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Knox County News">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/print_page.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Page 7 - Sports">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2 mb-1">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/print_module.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Module</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="Football Story 1">
+				</div>
+			</div>
+			<div class="row align-items-center gx-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/print_edition.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Edition</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="11/25/23">
+				</div>
+			</div>
+		</div>
+		<div class="content-box details">
+			<h5 class="mb-3">Lumen Details</h5>
+			<div class="row align-items-center gx-2">
+				<div class="col-5">
+					<div class="row gx-1">
+						<div class="col-auto">
+							<img src="img/storywatcher.webp" alt="">
+						</div>
+						<div class="col">
+							<div class="title-details">Story Watcher</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<input type="text" class="form-control input-edit" value="-">
+				</div>
+			</div>
+		</div>
+	</aside>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
+	<script src="https://cdn.tutorialjinni.com/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+	<script src="https://cdn.tutorialjinni.com/selectize.js/0.12.6/js/selectize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/common.js"></script>
+
+</body>
+</html>

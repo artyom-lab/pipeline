@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pipeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" rel="stylesheet">
+		<link href="https://cdn.tutorialjinni.com/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+	
+<body class="body-dashboard-new body-0" onLoad="starttime()">
+
+	<aside class="sidebar-left">
+		<div class="sidebar-bottom">
+			<nav class="accordion-wrap">
+				<div class="accordion accordion-1" id="accordionExample">
+					<div class="mb-2">
+						<a href="#!" class="dashboard active" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img bg-img" style="background-image: url(img/lead.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Leads</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseOne" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Lead 1</a> 
+								<a href="#!">Lead 2</a> 
+								<a href="#!">Lead 3</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-stories bg-img" style="background-image: url(img/content-black.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Stories</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseTwo" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Story 1</a> 
+								<a href="#!">Story 2</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-print bg-img" style="background-image: url(img/print_bw.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Print</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseThree" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Print 1</a> 
+								<a href="#!">Print 2</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-report bg-img" style="background-image: url(img/reports-black.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Reports</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseFour" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Report 1</a> 
+								<a href="#!">Report 2</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<a href="#!" class="dashboard" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+							<div class="row gx-3 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+	                  <div class="dashboard-img img-box-admin bg-img" style="background-image: url(img/admin_bw.webp)"></div>
+									</div>
+								</div>
+								<div class="col">Admin</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseFive" class="collapse" data-bs-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Settings</a> 
+								<a href="#!">FAQ</a> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</aside>
+
+	<aside class="sidebar-edit">
+		<div class="edit-box">
+			<div class="nav nav-pills flex-column pills-index mb-4">
+        <a class="nav-link" data-bs-toggle="tab" href="#pill1">
+        	<img src="img/pitch.webp" alt="" class="align-middle" width="15">
+        	<span class="align-middle ms-1">Pitch Index</span>
+        </a>
+        <a class="nav-link" data-bs-toggle="tab" href="#pill2">
+        	<img src="img/lead.webp" alt="" class="align-middle" width="15">
+        	<span class="align-middle ms-1">Lead Index</span>
+        </a>
+        <a class="nav-link active" data-bs-toggle="tab" href="#pill3">
+        	<img src="img/content.webp" alt="" class="align-middle" width="15">
+        	<span class="align-middle ms-1">Stories Index</span>
+        </a>
+      </div>
+  	</div>
+		<div class="tab-content" id="v-pills-tabContent">
+
+      <div class="tab-pane fade" id="pill1">
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Source</h5>
+	    			<a href="#!" class="link-status">
+	    				<span>Pitch</span><span class="ms-auto">15</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Lead</span><span class="ms-auto">1412</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Loki</span><span class="ms-auto">1345</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>HAW</span><span class="ms-auto">118,394</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Status</h5>
+	    			<a href="#!" class="link-status active">
+	    				<span class="circle circle-pending me-1">-</span>
+	    				<span>Pending</span>
+	    				<span class="ms-auto">1</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-rejected me-1">R</span>
+	    				<span>Rejected</span>
+	    				<span class="ms-auto">12</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-accepted me-1">L</span>
+	    				<span>Accepted/Lead</span>
+	    				<span class="ms-auto">3</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-write me-1">W</span>
+	    				<span>Write</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-edit me-1">E</span>
+	    				<span>Edit</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-scheduled me-1">S</span>
+	    				<span>Scheduled</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-archived me-1">A</span>
+	    				<span>Archived</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-published me-1">P</span>
+	    				<span>Published</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Project</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Austin American State (1)</option>
+						<option value="1">Houston Chronicle (2)</option>
+						<option value="2">DuPage Policy Journal (2)</option>
+						<option value="3">Madison Record (2)</option>
+						<option value="4">Penn Record (2)</option>
+						<option value="5">Houston Chronicle (2)</option>
+						<option value="6">DuPage Policy Journal (2)</option>
+						<option value="7">Madison Record (2)</option>
+						<option value="8">Penn Record (2)</option>
+						<option value="9">Houston Chronicle (2)</option>
+						<option value="10">DuPage Policy Journal (2)</option>
+						<option value="11">Madison Record (2)</option>
+						<option value="12">Penn Record (2)</option>
+					</select>
+				</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Content Type</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Court Filing (1)</option>
+						<option value="1">Enterprise 1 (2)</option>
+						<option value="2">Enterprise 2 (2)</option>
+						<option value="3">Enterprise 3 (2)</option>
+						<option value="4">Provided Announcement (1)</option>
+						<option value="5">Provided Statement (23)</option>
+						<option value="6">Court Filing (1)</option>
+						<option value="7">Enterprise 1 (2)</option>
+						<option value="8">Enterprise 2 (2)</option>
+						<option value="9">Enterprise 3 (2)</option>
+						<option value="10">Provided Announcement (1)</option>
+						<option value="11">Provided Statement (23)</option>
+					</select>
+				</div>	
+      </div>
+
+      <div class="tab-pane fade" id="pill2">
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Source</h5>
+	    			<a href="#!" class="link-status">
+	    				<span>Pitch</span><span class="ms-auto">25</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Lead</span><span class="ms-auto">2412</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Loki</span><span class="ms-auto">2345</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>HAW</span><span class="ms-auto">218,394</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Status</h5>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-pending me-1">-</span>
+	    				<span>Pending</span>
+	    				<span class="ms-auto">1</span>
+	    			</a>
+	    			<a href="#!" class="link-status active">
+	    				<span class="circle circle-rejected me-1">R</span>
+	    				<span>Rejected</span>
+	    				<span class="ms-auto">12</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-accepted me-1">L</span>
+	    				<span>Accepted/Lead</span>
+	    				<span class="ms-auto">3</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-write me-1">W</span>
+	    				<span>Write</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-edit me-1">E</span>
+	    				<span>Edit</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-scheduled me-1">S</span>
+	    				<span>Scheduled</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-archived me-1">A</span>
+	    				<span>Archived</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-published me-1">P</span>
+	    				<span>Published</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Project</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Austin American State (1)</option>
+						<option value="1">Houston Chronicle (2)</option>
+						<option value="2">DuPage Policy Journal (2)</option>
+						<option value="3">Madison Record (2)</option>
+						<option value="4">Penn Record (2)</option>
+						<option value="5">Houston Chronicle (2)</option>
+						<option value="6">DuPage Policy Journal (2)</option>
+						<option value="7">Madison Record (2)</option>
+						<option value="8">Penn Record (2)</option>
+						<option value="9">Houston Chronicle (2)</option>
+						<option value="10">DuPage Policy Journal (2)</option>
+						<option value="11">Madison Record (2)</option>
+						<option value="12">Penn Record (2)</option>
+					</select>
+				</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Content Type</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Court Filing (1)</option>
+						<option value="1">Enterprise 1 (2)</option>
+						<option value="2">Enterprise 2 (2)</option>
+						<option value="3">Enterprise 3 (2)</option>
+						<option value="4">Provided Announcement (1)</option>
+						<option value="5">Provided Statement (23)</option>
+						<option value="6">Court Filing (1)</option>
+						<option value="7">Enterprise 1 (2)</option>
+						<option value="8">Enterprise 2 (2)</option>
+						<option value="9">Enterprise 3 (2)</option>
+						<option value="10">Provided Announcement (1)</option>
+						<option value="11">Provided Statement (23)</option>
+					</select>
+				</div>
+      </div>
+
+      <div class="tab-pane fade active show" id="pill3">
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Source</h5>
+	    			<a href="#!" class="link-status">
+	    				<span>Pitch</span><span class="ms-auto">5</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Lead</span><span class="ms-auto">412</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>Loki</span><span class="ms-auto">345</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span>HAW</span><span class="ms-auto">18,394</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+    			<div class="edit-box">
+	      		<h5 class="mb-1 mx-2">Status</h5>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-pending me-1">-</span>
+	    				<span>Pending</span>
+	    				<span class="ms-auto">1</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-rejected me-1">R</span>
+	    				<span>Rejected</span>
+	    				<span class="ms-auto">12</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-accepted me-1">L</span>
+	    				<span>Accepted/Lead</span>
+	    				<span class="ms-auto">3</span>
+	    			</a>
+	    			<a href="#!" class="link-status active">
+	    				<span class="circle circle-write me-1">W</span>
+	    				<span>Write</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-edit me-1">E</span>
+	    				<span>Edit</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-scheduled me-1">S</span>
+	    				<span>Scheduled</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-archived me-1">A</span>
+	    				<span>Archived</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+	    			<a href="#!" class="link-status">
+	    				<span class="circle circle-published me-1">P</span>
+	    				<span>Published</span>
+	    				<span class="ms-auto">2</span>
+	    			</a>
+    			</div>
+    		</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Project</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Austin American State (1)</option>
+						<option value="1">Houston Chronicle (2)</option>
+						<option value="2">DuPage Policy Journal (2)</option>
+						<option value="3">Madison Record (2)</option>
+						<option value="4">Penn Record (2)</option>
+						<option value="5">Houston Chronicle (2)</option>
+						<option value="6">DuPage Policy Journal (2)</option>
+						<option value="7">Madison Record (2)</option>
+						<option value="8">Penn Record (2)</option>
+						<option value="9">Houston Chronicle (2)</option>
+						<option value="10">DuPage Policy Journal (2)</option>
+						<option value="11">Madison Record (2)</option>
+						<option value="12">Penn Record (2)</option>
+					</select>
+				</div>
+    		<div class="mb-4">
+	    		<div class="edit-box">
+	      		<h5 class="mb-1 mx-2 d-flex">
+	      			<span>Content Type</span>
+	      			<a href="#!" class="violet ms-auto">All</a>
+	      		</h5>
+	    		</div>
+					<select class="select-beast" placeholder="Search or Select">
+						<option value="">Search or Select</option>
+						<option value="0">Court Filing (1)</option>
+						<option value="1">Enterprise 1 (2)</option>
+						<option value="2">Enterprise 2 (2)</option>
+						<option value="3">Enterprise 3 (2)</option>
+						<option value="4">Provided Announcement (1)</option>
+						<option value="5">Provided Statement (23)</option>
+						<option value="6">Court Filing (1)</option>
+						<option value="7">Enterprise 1 (2)</option>
+						<option value="8">Enterprise 2 (2)</option>
+						<option value="9">Enterprise 3 (2)</option>
+						<option value="10">Provided Announcement (1)</option>
+						<option value="11">Provided Statement (23)</option>
+					</select>
+				</div>	
+      </div>
+    </div>
+	</aside>
+
+	<header class="navbar navbar-dashboard navbar-dashboard-new fixed-top">
+		<div class="row g-0 align-items-center w-100">
+			<div class="col-auto">
+				<div class="sidebar-top">
+					<div class="row gx-2 align-items-center my-auto">
+						<div class="col">
+							<a class="logo" href="#!">
+								<img src="img/pipeline.webp" alt="">
+							</a>
+						</div>
+						<div class="col-auto fz-0">
+							<button class="sandwich sandwich-blue d-xl-none" id="sandwich">
+						    <span></span>
+						  </button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<form class="form-search-2">
+		      <input class="form-control" type="text" placeholder="Search for Stories, Leads and Pitches">
+		      <button class="fas fa-search"></button>
+		    </form>
+			</div>
+			<div class="col-auto">
+				<div class="avatar-box">
+					<div class="row g-0 align-items-center justify-content-end my-auto">
+						<div class="col d-none d-xxl-block">
+							<form class="clock row g-0 align-items-center" name="clock">
+								<div class="col text-center">ACME Regional - Illinois</div>
+								<div class="col-auto">
+									<input class="form-control" type="text" name="next">
+								</div>
+							</form>
+						</div>
+						<div class="col-auto">
+							<a href="#!" class="avatar ms-3" style="background-image: url(img/avatar.webp)"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="w-1200 display-flex">
+		<section class="content-new d-flex flex-column flex-grow-1">
+			<div class="content-box">
+				<h6 class="mb-0">Stories Index</h6>
+			</div>
+			<div class="content-box">
+				<div class="table-responsive scroll scroll-table">
+					<table class="table table-stories table-borderless mt-3 mb-0">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Pitcher</th>
+								<th>Acceptor / Lead Gen</th>
+								<th>Project</th>
+								<th>Status</th>
+								<th>Aging</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>John Smith Wilson</td>
+								<td>-</td>
+								<td>Madison County Record</td>
+								<td>
+									<span class="circle circle-pending circle-big me-1">-</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">18:48</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Heather Isringhaus</td>
+								<td>Heather Isringhaus</td>
+								<td>Coconino News</td>
+								<td>
+									<span class="circle circle-archived circle-big me-1">-</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">Total 14:45</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-violet circle-big me-1">L</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>-</td>
+								<td>Stephanie Albright</td>
+								<td>SW Virginia News</td>
+								<td>
+									<span class="circle circle-write circle-big me-1">W</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">23:11</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Stephanie Albright</td>
+								<td>Stephanie Albright</td>
+								<td>Federal Newswire</td>
+								<td>
+									<span class="circle circle-edit circle-big me-1">E</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">3:13</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-violet circle-big me-1">L</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Brian Salazar</td>
+								<td>Brian Salazar</td>
+								<td>NE Valley Times</td>
+								<td>
+									<span class="circle circle-pending circle-big me-1">-</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-orange">0:23</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Harry Lamella</td>
+								<td>Harry Lamella</td>
+								<td>Southern Illinois News</td>
+								<td>
+									<span class="circle circle-published circle-big me-1">P</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">14:53</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>Grand Canyon times</td>
+								<td>
+									<span class="circle circle-rejected circle-big me-1">R</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-red">Total 1:53</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>John Smith Wilson</td>
+								<td>-</td>
+								<td>Madison County Record</td>
+								<td>
+									<span class="circle circle-pending circle-big me-1">-</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">18:48</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Heather Isringhaus</td>
+								<td>Heather Isringhaus</td>
+								<td>Coconino News</td>
+								<td>
+									<span class="circle circle-archived circle-big me-1">-</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">Total 14:45</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-violet circle-big me-1">L</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>-</td>
+								<td>Stephanie Albright</td>
+								<td>SW Virginia News</td>
+								<td>
+									<span class="circle circle-write circle-big me-1">W</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">23:11</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Stephanie Albright</td>
+								<td>Stephanie Albright</td>
+								<td>Federal Newswire</td>
+								<td>
+									<span class="circle circle-edit circle-big me-1">E</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">3:13</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-violet circle-big me-1">L</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Brian Salazar</td>
+								<td>Brian Salazar</td>
+								<td>NE Valley Times</td>
+								<td>
+									<span class="circle circle-pending circle-big me-1">-</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-orange">0:23</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>Harry Lamella</td>
+								<td>Harry Lamella</td>
+								<td>Southern Illinois News</td>
+								<td>
+									<span class="circle circle-published circle-big me-1">P</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-green">14:53</div></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="circle circle-orange circle-big me-1">P</span>
+									<a href="#!" class="align-middle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>Grand Canyon times</td>
+								<td>
+									<span class="circle circle-rejected circle-big me-1">R</span>
+									<span class="align-middle">11/15/2023 @ 9:39 AM</span>
+								</td>
+								<td><div class="aging-pill bg-red">Total 1:53</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
+	<script src="https://cdn.tutorialjinni.com/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+	<script src="https://cdn.tutorialjinni.com/selectize.js/0.12.6/js/selectize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/common.js"></script>
+
+</body>
+</html>
