@@ -468,53 +468,6 @@ body {
       background: #ff0050;
       color: #FFF; }
 
-.message-box {
-  border: 1px solid #e0e2ec;
-  border-radius: 8px;
-  padding: 0 18px; }
-
-.textarea-message {
-  border: 0;
-  min-height: 220px !important;
-  resize: none;
-  padding: 12px 0;
-  border-radius: 0;
-  border-top: 2px solid #e0e2ec;
-  font-size: 14px; }
-  .textarea-message:focus {
-    box-shadow: none;
-    border-color: #e0e2ec; }
-
-.message-header {
-  padding-top: 8px; }
-
-.message-pill {
-  min-height: 30px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  margin-bottom: 8px; }
-  @media (max-width: 575.98px) {
-    .message-pill {
-      min-height: 26px; } }
-  .message-pill .pill {
-    min-width: 30px;
-    height: 30px;
-    color: #222222;
-    font-size: 14px;
-    vertical-align: middle;
-    text-align: center;
-    display: inline-block;
-    line-height: 30px;
-    transition: 0.3s; }
-    @media (max-width: 575.98px) {
-      .message-pill .pill {
-        min-width: 26px;
-        height: 26px;
-        line-height: 26px; } }
-    .message-pill .pill.disabled {
-      opacity: 0.5; }
-
 .body-dashboard-new {
   transition: 0.3s;
   padding-top: 64px;
@@ -1031,7 +984,7 @@ hr {
 .circle.circle-pending, .circle-big.circle-pending {
   background: #b7becf; }
 .circle.circle-rejected, .circle-big.circle-rejected {
-  background: #ff0044; }
+  background: #ff0050; }
 .circle.circle-accepted, .circle-big.circle-accepted {
   background: #16cab5; }
 .circle.circle-write, .circle-big.circle-write {
@@ -1060,7 +1013,7 @@ hr {
   .aging-pill.bg-orange {
     background: #ff9400; }
   .aging-pill.bg-red {
-    background: #ff0044; }
+    background: #ff0050; }
 
 .scroll {
   height: 100%;
@@ -1115,10 +1068,12 @@ hr {
 .input-edit {
   border: 2px dashed #e0e2ec;
   height: 30px;
-  font-size: 12px; }
+  font-size: 12px;
+  transition: 0.3s; }
   .input-edit:focus {
     box-shadow: none;
-    border: 2px solid #4e3cf4; }
+    background: #FFF;
+    border-color: #4e3cf4; }
   .input-edit.input-edit-big {
     height: 40px;
     font-size: 14px; }
@@ -1127,12 +1082,14 @@ hr {
   border: 2px dashed #e0e2ec;
   min-height: 70px !important;
   resize: none;
+  overflow: hidden;
   padding: 10px 12px;
   font-weight: bold;
   font-size: 14px; }
   .textarea-edit:focus {
     box-shadow: none;
-    border: 2px solid #4e3cf4; }
+    background: #FFF;
+    border-color: #4e3cf4; }
   .textarea-edit.textarea-edit-big {
     min-height: 130px !important;
     font-weight: normal; }
@@ -1252,5 +1209,18 @@ hr {
     background: rgba(0, 0, 0, 0.75);
     font-size: 14px;
     text-align: center; }
+
+.tox-tinymce {
+  border: 2px solid #e0e2ec !important;
+  padding-left: 16px;
+  padding-right: 16px; }
+  .tox-tinymce .tox-editor-header {
+    box-shadow: none !important;
+    border-bottom: 1px solid #e0e2ec !important; }
+  .tox-tinymce .tox-bottom-anchorbar, .tox-tinymce .tox-statusbar {
+    display: none !important; }
+
+.tox-notifications-container {
+  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */

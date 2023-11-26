@@ -25,6 +25,25 @@ $(document).ready(function () {
 
   $('.select-beast').selectize({});
 
+  autosize();
+  function autosize(){
+    var text = $('.autosize');
+
+    text.each(function(){
+        $(this).attr('rows',1);
+        resize($(this));
+    });
+
+    text.on('input', function(){
+        resize($(this));
+    });
+    
+    function resize ($text) {
+        $text.css('height', 'auto');
+        $text.css('height', $text[0].scrollHeight+'px');
+    }
+  };
+
  // SELECT2
 
 (function($) {
@@ -196,3 +215,23 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement.style.backgroundImage = null;
   }
 }
+
+// EDITOR
+
+tinymce.init({
+  selector: '#tiny',
+  height: 340,
+  plugins: [
+    'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+    'searchreplace', 'wordcount', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media',
+    'table', 'emoticons', 'template', 'help'
+  ],
+  toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+    'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+    'forecolor backcolor emoticons | help',
+  menu: {
+    favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+  },
+  menubar: 'favs file edit view insert format tools table help',
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+});
