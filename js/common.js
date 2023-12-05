@@ -233,5 +233,12 @@ tinymce.init({
     favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
   },
   menubar: 'favs file edit view insert format tools table help',
-  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
+  tinycomments_mode: 'embedded',
+  tinycomments_author: 'Author name',
+  mergetags_list: [
+    { value: 'First.Name', title: 'First Name' },
+    { value: 'Email', title: 'Email' },
+  ],
+  ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
 });

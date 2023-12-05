@@ -7,7 +7,7 @@ $color-black: #222222
 $color-blue: #1e39a1
 $color-blue-2: #677ac0
 $color-border: #e0e2ec
-$color-red: #ff0050
+$color-red: #ff0044
 $color-violet: #4e3cf4
 $color-body: #f6f6f8
 $color-gray: #404d56
@@ -516,14 +516,14 @@ body
 .navbar-dashboard-new
 	padding: 0
 	background: $color-white
-	border-bottom: 2px solid $color-border
+	border-bottom: 1px solid $color-border
 	@media (max-width: 991.98px)
 		left: -260px
 	.sidebar-top
 		background: $color-white
 		transition: $transition
 		width: 260px 	
-		border-right: 2px solid $color-border
+		border-right: 1px solid $color-border
 		@media (min-width: 1200px)
 			width: 300px
 
@@ -537,7 +537,7 @@ body
 		height: 70px
 	@media (min-width: 1400px)
 		width: 345px
-		border-left: 2px solid $color-border
+		border-left: 1px solid $color-border
 
 .sidebar-left
 	position: fixed
@@ -552,7 +552,7 @@ body
 	z-index: 1040
 	transition: $transition
 	background-color: #fafafa
-	border-right: 2px solid $color-border
+	border-right: 1px solid $color-border
 	@media (max-width: 991.98px)	
 		left: -70px
 		right: auto
@@ -659,7 +659,7 @@ body
 	background-color: $color-white
 	flex-grow: 1
 	overflow: auto
-	border-right: 2px solid $color-border
+	border-right: 1px solid $color-border
 	&::-webkit-scrollbar
 		display: none
 	@media (min-width: 1200px)
@@ -729,7 +729,7 @@ body
 	top: 72px
 	right: 0
 	background-color: $color-white
-	border-left: 2px solid $color-border
+	border-left: 1px solid $color-border
 	max-height: calc(100vh - 72px)
 	padding-bottom: 110px
 	&::-webkit-scrollbar
@@ -750,18 +750,18 @@ body
 	@media (min-width: 1950px)
 		margin: 32px 0 
 		border-radius: 15px
-		border: 2px solid $color-border
+		border: 1px solid $color-border
 
 .content-box
 	padding: 20px
 	font-size: 14px
 	&:not(:last-child)
-		border-bottom: 2px solid $color-border
+		border-bottom: 1px solid $color-border
 	@media (max-width: 797.98px)
 		padding: 20px 15px
 
 hr 
-	border-top: 2px solid $color-border
+	border-top: 1px solid $color-border
 	opacity: 1
 	margin: 0
 
@@ -878,9 +878,9 @@ hr
 		height: 30px
 		.selectize-input
 			border: 0
-			border-top: 2px solid $color-border
-			border-bottom: 2px solid $color-border
-			padding: 4px 20px
+			border-top: 1px solid $color-border
+			border-bottom: 1px solid $color-border
+			padding: 5px 20px
 			transition: $transition
 			height: 30px
 			box-shadow: none
@@ -1058,7 +1058,7 @@ hr
 		width: 15px
 
 .input-edit
-	border: 2px dashed $color-border
+	border: 1px dashed $color-border
 	height: 30px
 	font-size: 12px
 	transition: $transition
@@ -1071,7 +1071,7 @@ hr
 		font-size: 14px
 
 .textarea-edit
-	border: 2px dashed $color-border
+	border: 1px dashed $color-border
 	min-height: 70px !important
 	resize: none
 	overflow: hidden
@@ -1090,12 +1090,12 @@ hr
 	border-radius: 5px
 	display: inline-block
 	padding: 10px
-	border: 2px dashed $color-border
+	border: 1px dashed $color-border
 
 .archive-box
 	padding: 16px 20px
 	min-height: 72px
-	border-bottom: 2px solid $color-border
+	border-bottom: 1px solid $color-border
 	@media (max-width: 767.98px)
 		min-height: 64px
 		padding: 12px 20px
@@ -1108,7 +1108,7 @@ hr
 
 .steps-box
 	padding: 10px 70px
-	border-bottom: 2px solid $color-border
+	border-bottom: 1px solid $color-border
 	@media (min-width: 1400px)
 		min-height: 72px
 	@media (max-width: 767.98px)
@@ -1168,7 +1168,7 @@ hr
 	width: 250px
 	border-radius: 5px
 	padding: 10px
-	border: 2px dashed $color-border
+	border: 1px dashed $color-border
 	color: $color-black
 	display: flex
 	align-items: center
@@ -1203,14 +1203,12 @@ hr
 // TEXT-EDITOR
 
 .tox-tinymce
-	border: 2px solid $color-border !important
+	border: 1px solid $color-border !important
 	padding-left: 16px
 	padding-right: 16px
 	.tox-editor-header
 		box-shadow: none !important
 		border-bottom: 1px solid $color-border !important
-	.tox-bottom-anchorbar, .tox-statusbar
+	.tox-bottom-anchorbar, .tox-statusbar, .tox-promotion
 		display: none !important
 
-.tox-notifications-container
-	display: none !important
