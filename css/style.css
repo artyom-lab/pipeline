@@ -1067,25 +1067,34 @@ hr {
 
 .input-edit {
   border: 1px dashed #e0e2ec;
-  height: 30px;
+  min-height: 30px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  word-break: break-all;
   font-size: 12px;
   transition: 0.3s; }
+  .input-edit:hover {
+    background: #ededf0; }
   .input-edit:focus {
     box-shadow: none;
     background: #FFF;
     border-color: #4e3cf4; }
   .input-edit.input-edit-big {
-    height: 40px;
+    min-height: 40px;
+    padding: 8.5px 12px;
     font-size: 14px; }
 
 .textarea-edit {
   border: 1px dashed #e0e2ec;
   min-height: 70px !important;
-  resize: none;
-  overflow: hidden;
+  border-radius: 5px;
   padding: 10px 12px;
+  word-break: break-all;
   font-weight: bold;
-  font-size: 14px; }
+  font-size: 14px;
+  transition: 0.3s; }
+  .textarea-edit:hover {
+    background: #ededf0; }
   .textarea-edit:focus {
     box-shadow: none;
     background: #FFF;

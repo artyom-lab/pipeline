@@ -1057,27 +1057,38 @@ hr
 	img 
 		width: 15px
 
+// EDIT
+
 .input-edit
 	border: 1px dashed $color-border
-	height: 30px
+	min-height: 30px
+	padding: 6px 12px
+	border-radius: 5px
+	word-break: break-all
 	font-size: 12px
 	transition: $transition
+	&:hover
+		background: $color-dashboard
 	&:focus
 		box-shadow: none
 		background: $color-white
 		border-color: $color-violet
 	&.input-edit-big
-		height: 40px
+		min-height: 40px
+		padding: 8.5px 12px
 		font-size: 14px
 
 .textarea-edit
 	border: 1px dashed $color-border
 	min-height: 70px !important
-	resize: none
-	overflow: hidden
+	border-radius: 5px
 	padding: 10px 12px
+	word-break: break-all
 	font-weight: bold
 	font-size: 14px
+	transition: $transition
+	&:hover
+		background: $color-dashboard
 	&:focus 
 		box-shadow: none
 		background: $color-white
