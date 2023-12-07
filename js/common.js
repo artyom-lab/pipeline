@@ -25,6 +25,34 @@ $(document).ready(function () {
 
   $('.select-beast').selectize({});
 
+autosize();
+function autosize(){
+    var text = $('.autosize');
+
+    text.each(function(){
+        $(this).attr('rows',1);
+        resize($(this));
+    });
+
+    text.on('input', function(){
+        resize($(this));
+    });
+    
+    function resize ($text) {
+        $text.css('height', 'auto');
+        $text.css('height', $text[0].scrollHeight+'px');
+    }
+}
+
+// CALENDAR
+
+$('input[name="birthday1"]').daterangepicker({
+  singleDatePicker: true,
+  showDropdowns: true,
+  minYear: 2020,
+  maxYear: parseInt(moment().format('YYYY'),10)
+});
+
  // SELECT2
 
 (function($) {

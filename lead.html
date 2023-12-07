@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" rel="stylesheet">
 		<link href="https://cdn.tutorialjinni.com/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 	
@@ -536,7 +537,7 @@
 				<div class="row gx-2">
 					<div class="col-md-2 font-weight-bold mt-md-2">Lead Name</div>
 					<div class="col-md-10">
-						<div class="textarea-edit" contenteditable>Organization Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem iusto, tempora suscipit animi, quas veniam illum quisquam</div>
+						<textarea class="form-control textarea-edit fw-bold autosize">Organization Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem iusto, tempora suscipit animi, quas veniam illum quisquam</textarea>
 					</div>
 				</div>
 			</div>
@@ -579,8 +580,20 @@
 				<div class="mb-2">The available Projects are based on those that the Organization is associated to. If you need to assign a different project you can search and select it. If the Project was not assigned, contact your manager.</div>
 				<div class="row gx-2 align-items-center">
 					<div class="col-sm-3 col-md-2 font-weight-bold">Select Project</div>
-					<div class="col-md-10">
-						<div class="input-edit input-edit-big d-inline-block" contenteditable>DuPage Policy Journal</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="select-box select-box-dashed select-box-dashed-big">
+							<select class="select2" data-placeholder="Project">
+								<option></option>
+								<option value="0">Chicago City Wire</option>
+								<option value="1">New Youk City Wire</option>
+								<option value="2">Washington City Wire</option>
+								<option value="3">Atlanta City Wire</option>
+								<option value="4">Nashville City Wire</option>
+								<option value="5">Toronto City Wire</option>
+								<option value="6">Philadelphia City Wire</option>
+								<option value="7">Denver City Wire</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -589,34 +602,75 @@
 				<div class="mb-2">The available Agencies and Opportunities are based on the selected Project above. If only one Agency and Opportunity is available, it will automatically be selected. If you do not see the correct options, contact your manager.</div>
 				<div class="row gx-2 align-items-center mb-2">
 					<div class="col-sm-3 col-md-2 font-weight-bold">Agency</div>
-					<div class="col-md-10">
-						<div class="input-edit input-edit-big d-inline-block" contenteditable>ACME</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="select-box select-box-dashed select-box-dashed-big">
+							<select class="select2" data-placeholder="Agency">
+								<option></option>
+								<option value="0">ACME</option>
+								<option value="1">ACME 2</option>
+								<option value="2">ACME 3</option>
+								<option value="3">ACME 4</option>
+								<option value="4">ACME 5</option>
+								<option value="5">ACME 6</option>
+								<option value="6">ACME 7</option>
+								<option value="7">ACME 8</option>
+							</select>
+						</div>
 					</div>
 				</div>
 				<div class="row gx-2 align-items-center mb-2">
 					<div class="col-sm-3 col-md-2 font-weight-bold">Opportunity</div>
-					<div class="col-md-10">
-						<div class="input-edit input-edit-big d-inline-block" contenteditable>ACME Regional - Illinois</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="select-box select-box-dashed select-box-dashed-big">
+							<select class="select2" data-placeholder="Opportunity">
+								<option></option>
+								<option value="0">ACME - Regional - Illinois</option>
+								<option value="1">ACME - New York</option>
+								<option value="2">ACME - Toronto</option>
+								<option value="3">ACME - Detroit</option>
+								<option value="4">ACME - Alabama</option>
+								<option value="5">ACME - Alaska</option>
+								<option value="6">ACME - Texas</option>
+								<option value="7">ACME - Montreal</option>
+							</select>
+						</div>
 					</div>
 				</div>
 				<div class="row gx-2 align-items-center mb-2">
 					<div class="col-sm-3 col-md-2 font-weight-bold">Content Type</div>
-					<div class="col-md-10">
-						<div class="input-edit input-edit-big d-inline-block" contenteditable>Provided Statement</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="select-box select-box-dashed select-box-dashed-big">
+							<select class="select2" data-placeholder="Content Type">
+								<option></option>
+								<option value="0">Provided Statement</option>
+								<option value="1">Provided Announcement</option>
+							</select>
+						</div>
 					</div>
 				</div>
 				<div class="row gx-2 align-items-center">
 					<div class="col-sm-3 col-md-2 font-weight-bold">Opportunity Type</div>
-					<div class="col-md-10">
-						<div class="input-edit input-edit-big d-inline-block" contenteditable>Baseline</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="select-box select-box-dashed select-box-dashed-big">
+							<select class="select2" data-placeholder="Opportunity Type">
+								<option></option>
+								<option value="0">Baseline</option>
+								<option value="1">Baseline 2</option>
+								<option value="2">Baseline 3</option>
+								<option value="3">Baseline 4</option>
+								<option value="4">Baseline 5</option>
+								<option value="5">Baseline 6</option>
+								<option value="6">Baseline 7</option>
+								<option value="7">Baseline 8</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="content-box">
 				<h6 class="mb-2">Instructions</h6>
 				<div class="mb-2">Include any necessary instructions or notes on how the lead should be executed. The writer will see this information when they begin to write the story.</div>
-				<div class="textarea-edit textarea-edit-big" contenteditable>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, optio? Fugiat non quam dicta magnam pariatur, odio possimus distinctio tempore doloremque nemo iusto voluptatem facilis minus. Quo possimus aliquam suscipit! <br><br>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, optio? Fugiat non quam dicta magnam pariatur, odio possimus distinctio tempore doloremque nemo iusto voluptatem facilis minus. Quo possimus aliquam suscipit!</div>
+				<textarea class="form-control textarea-edit textarea-edit-big autosize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, optio? Fugiat non quam dicta magnam pariatur, odio possimus distinctio tempore doloremque nemo iusto voluptatem facilis minus.</textarea>
 			</div>
 			<div class="content-box">
 				<h6 class="mb-2">Media</h6>
@@ -631,19 +685,19 @@
 						<div class="row gx-2 align-items-center mb-2">
 							<div class="col-md-2 font-weight-bold">File Name</div>
 							<div class="col-md-10">
-								<div class="input-edit input-edit-big" contenteditable>john_abbott_sr.png</div>
+								<textarea class="form-control textarea-edit autosize">john_abbott_sr.png</textarea>
 							</div>
 						</div>
 						<div class="row gx-2 align-items-center mb-2">
 							<div class="col-md-2 font-weight-bold">Caption</div>
 							<div class="col-md-10">
-								<div class="input-edit input-edit-big" contenteditable>John Abbott Sr.</div>
+								<textarea class="form-control textarea-edit autosize">John Abbott Sr.</textarea>
 							</div>
 						</div>
 						<div class="row gx-2 align-items-center">
 							<div class="col-md-2 font-weight-bold">Credit</div>
 							<div class="col-md-10">
-								<div class="input-edit input-edit-big" contenteditable>amhurstcollege.edu</div>
+								<textarea class="form-control textarea-edit autosize">amhurstcollege.edu</textarea>
 							</div>
 						</div>
 					</div>
@@ -775,7 +829,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Paul Thompson</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Writer">
+							<option></option>
+							<option value="0">Paul Thompson</option>
+							<option value="1">John Thompson</option>
+							<option value="2">Jack Thompson</option>
+							<option value="3">Johnny Thompson</option>
+							<option value="4">Paul Thompson</option>
+							<option value="5">John Thompson</option>
+							<option value="6">Jack Thompson</option>
+							<option value="7">Johnny Thompson</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -790,7 +856,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>LGIS</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Network">
+							<option></option>
+							<option value="0">LGIS</option>
+							<option value="1">LGIS 2</option>
+							<option value="2">LGIS 3</option>
+							<option value="3">LGIS 4</option>
+							<option value="4">LGIS 5</option>
+							<option value="5">LGIS 6</option>
+							<option value="6">LGIS 7</option>
+							<option value="7">LGIS 8</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -805,7 +883,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Chicago City Wire</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Project">
+							<option></option>
+							<option value="0">Chicago City Wire</option>
+							<option value="1">New Youk City Wire</option>
+							<option value="2">Washington City Wire</option>
+							<option value="3">Atlanta City Wire</option>
+							<option value="4">Nashville City Wire</option>
+							<option value="5">Toronto City Wire</option>
+							<option value="6">Philadelphia City Wire</option>
+							<option value="7">Denver City Wire</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -820,7 +910,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>ACME</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Agency">
+							<option></option>
+							<option value="0">ACME</option>
+							<option value="1">ACME 2</option>
+							<option value="2">ACME 3</option>
+							<option value="3">ACME 4</option>
+							<option value="4">ACME 5</option>
+							<option value="5">ACME 6</option>
+							<option value="6">ACME 7</option>
+							<option value="7">ACME 8</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -835,7 +937,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>ACME - Regional - Illinois</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Opportunity">
+							<option></option>
+							<option value="0">ACME - Regional - Illinois</option>
+							<option value="1">ACME - New York</option>
+							<option value="2">ACME - Toronto</option>
+							<option value="3">ACME - Detroit</option>
+							<option value="4">ACME - Alabama</option>
+							<option value="5">ACME - Alaska</option>
+							<option value="6">ACME - Texas</option>
+							<option value="7">ACME - Montreal</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -850,7 +964,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Baseline</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Opportunity Type">
+							<option></option>
+							<option value="0">Baseline</option>
+							<option value="1">Baseline 2</option>
+							<option value="2">Baseline 3</option>
+							<option value="3">Baseline 4</option>
+							<option value="4">Baseline 5</option>
+							<option value="5">Baseline 6</option>
+							<option value="6">Baseline 7</option>
+							<option value="7">Baseline 8</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2">
@@ -865,7 +991,13 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Provided Statement</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Content Type">
+							<option></option>
+							<option value="0">Provided Statement</option>
+							<option value="1">Provided Announcement</option>
+						</select>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -898,7 +1030,14 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Story Section</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Story Section">
+							<option></option>
+							<option value="0">Story Section</option>
+							<option value="1">Story Section 2</option>
+							<option value="2">Story Section 3</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2">
@@ -913,7 +1052,14 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Story Tag</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Story Tag">
+							<option></option>
+							<option value="0">Story Tag</option>
+							<option value="1">Story Tag 2</option>
+							<option value="2">Story Tag 3</option>
+						</select>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1002,7 +1148,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Knox County News</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Publication">
+							<option></option>
+							<option value="0">Knox County News</option>
+							<option value="1">DuPage News</option>
+							<option value="2">The Loop News</option>
+							<option value="3">Knox County News</option>
+							<option value="4">DuPage News</option>
+							<option value="5">The Loop News</option>
+							<option value="6">DuPage News</option>
+							<option value="7">The Loop News</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -1017,7 +1175,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Page 7 - Sports</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Page">
+							<option></option>
+							<option value="0">Page 8 - Sports</option>
+							<option value="1">Page 9 - Sports</option>
+							<option value="2">Page 10 - Sports</option>
+							<option value="3">Page 11 - Sports</option>
+							<option value="4">Page 12 - Sports</option>
+							<option value="5">Page 13 - Sports</option>
+							<option value="6">Page 14 - Sports</option>
+							<option value="7">Page 15 - Sports</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2 mb-1">
@@ -1032,7 +1202,19 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>Football Story 1</div>
+					<div class="select-box select-box-dashed">
+						<select class="select2" data-placeholder="Module">
+							<option></option>
+							<option value="0">Football Story 1</option>
+							<option value="1">Football Story 2</option>
+							<option value="2">Football Story 3</option>
+							<option value="3">Football Story 4</option>
+							<option value="4">Football Story 5</option>
+							<option value="5">Football Story 6</option>
+							<option value="6">Football Story 7</option>
+							<option value="7">Football Story 8</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row align-items-center gx-2">
@@ -1047,7 +1229,9 @@
 					</div>
 				</div>
 				<div class="col-7">
-					<div class="input-edit" contenteditable>11/25/23</div>
+					<div class="position-relative">
+						<input type="text" class="form-control edit-calendar" name="birthday1">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1060,6 +1244,8 @@
 	<script src="https://cdn.tutorialjinni.com/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
 	<script src="https://cdn.tutorialjinni.com/selectize.js/0.12.6/js/selectize.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.1/tinymce.min.js" referrerpolicy="origin"></script>
   <script src="js/common.js"></script>
 

@@ -655,7 +655,7 @@ body {
   width: 190px;
   top: 72px;
   bottom: 0;
-  padding: 16px 0 110px;
+  padding: 16px 0 150px;
   left: 70px;
   max-height: 100vh;
   display: flex;
@@ -743,7 +743,7 @@ body {
   background-color: #FFF;
   border-left: 1px solid #e0e2ec;
   max-height: calc(100vh - 72px);
-  padding-bottom: 110px; }
+  padding-bottom: 280px; }
   .sidebar-right::-webkit-scrollbar {
     display: none; }
   @media (max-width: 1399.98px) {
@@ -825,7 +825,7 @@ hr {
     border: 1px solid #e1e3ec;
     padding: 0px 36px 0 12px;
     transition: 0.3s;
-    height: 45px; }
+    height: 38px; }
     .select2-container .select2-selection--single .select2-selection__rendered {
       padding-left: 0;
       padding-right: 0; }
@@ -833,19 +833,19 @@ hr {
     display: block; }
 
 .select2-container--default .select2-selection--single {
-  border-radius: 8px; }
+  border-radius: 5px; }
   .select2-container--default .select2-selection--single .select2-selection__rendered, .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: #6c7884;
-    line-height: 45px;
+    line-height: 38px;
     font-size: 14px; }
   .select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container--default .select2-selection--single .select2-selection__clear {
     display: none; }
 
 .select2-container--open .select2-dropdown {
   border: 1px solid #e1e3ec;
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
-  top: -45px;
+  top: -38px;
   padding: 0;
   z-index: 1039; }
   .select2-container--open .select2-dropdown .select2-search--dropdown {
@@ -854,15 +854,15 @@ hr {
       border: 0;
       border-bottom: 1px solid #e1e3ec;
       color: #222222;
-      border-radius: 8px 8px 0 0;
+      border-radius: 5px 5px 0 0;
       padding: 4px 12px;
-      height: 45px;
-      font-size: 13px;
+      height: 38px;
+      font-size: 12px;
       background: #FFF; }
   .select2-container--open .select2-dropdown .select2-results {
     padding: 4px; }
     .select2-container--open .select2-dropdown .select2-results .select2-results__options {
-      max-height: 140px;
+      max-height: 132px;
       padding-right: 4px; }
       .select2-container--open .select2-dropdown .select2-results .select2-results__options::-webkit-scrollbar {
         width: 4px;
@@ -874,9 +874,9 @@ hr {
         background-color: #e1e3ec;
         border-radius: 2px; }
       .select2-container--open .select2-dropdown .select2-results .select2-results__options .select2-results__option {
-        font-size: 13px;
+        font-size: 12px;
         padding: 4px 6px;
-        color: #6c7884;
+        color: #222222;
         background-color: transparent; }
       .select2-container--open .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted.select2-results__option--selectable {
         background: transparent; }
@@ -885,6 +885,19 @@ hr {
           border-radius: 5px;
           font-weight: bold;
           border: 1px solid #e1e3ec; }
+
+.select-box-dashed .select2-container .select2-selection--single {
+  background: #FFF;
+  padding: 0 12px;
+  border: 1px dashed #e0e2ec;
+  transition: 0.3s; }
+  .select-box-dashed .select2-container .select2-selection--single:hover {
+    background: #ededf0; }
+.select-box-dashed .select2-selection__rendered, .select-box-dashed .select2-selection__placeholder {
+  color: #222222 !important;
+  font-size: 12px !important; }
+.select-box-dashed.select-box-dashed-big .select2-selection__rendered, .select-box-dashed.select-box-dashed-big .select2-selection__placeholder {
+  font-size: 14px !important; }
 
 .select-beast ~ .selectize-control {
   height: 30px; }
@@ -906,7 +919,7 @@ hr {
     .select-beast ~ .selectize-control .selectize-input:after {
       display: none; }
   .select-beast ~ .selectize-control .selectize-dropdown {
-    color: #6c7884;
+    color: #222222;
     border: 0;
     border-bottom: 1px solid #e1e3ec;
     padding: 5px; }
@@ -914,10 +927,10 @@ hr {
       padding-left: 8px;
       padding-right: 8px;
       cursor: pointer;
-      font-size: 13px;
-      padding: 5px 7px;
-      border: 1px solid transparent;
-      margin-bottom: 2px; }
+      font-size: 12px;
+      color: #222222;
+      padding: 4px 6px;
+      border: 1px solid transparent; }
       .select-beast ~ .selectize-control .selectize-dropdown .option:hover, .select-beast ~ .selectize-control .selectize-dropdown .option.active {
         background-color: #f6f6f8;
         border-radius: 5px;
@@ -925,7 +938,7 @@ hr {
         font-weight: bold; }
 .select-beast .selectize-dropdown-content {
   overflow: auto;
-  max-height: 160px;
+  max-height: 140px;
   padding-right: 4px; }
   .select-beast .selectize-dropdown-content::-webkit-scrollbar {
     width: 4px;
@@ -1065,32 +1078,29 @@ hr {
   .details img {
     width: 15px; }
 
-.input-edit {
-  border: 1px dashed #e0e2ec;
-  min-height: 30px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  word-break: break-all;
+.edit-calendar {
   font-size: 12px;
-  transition: 0.3s; }
-  .input-edit:hover {
+  color: #222222;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px dashed #e0e2ec; }
+  .edit-calendar:hover {
     background: #ededf0; }
-  .input-edit:focus {
+  .edit-calendar:focus {
     box-shadow: none;
-    background: #FFF;
-    border-color: #4e3cf4; }
-  .input-edit.input-edit-big {
-    min-height: 40px;
-    padding: 8.5px 12px;
-    font-size: 14px; }
+    border: 1px solid #e0e2ec; }
+
+.daterangepicker:before, .daterangepicker:after {
+  display: none; }
 
 .textarea-edit {
   border: 1px dashed #e0e2ec;
-  min-height: 70px !important;
+  min-height: 38px !important;
   border-radius: 5px;
-  padding: 10px 12px;
+  padding: 8px 12px;
+  resize: none;
+  overflow: hidden;
   word-break: break-all;
-  font-weight: bold;
   font-size: 14px;
   transition: 0.3s; }
   .textarea-edit:hover {
@@ -1100,8 +1110,7 @@ hr {
     background: #FFF;
     border-color: #4e3cf4; }
   .textarea-edit.textarea-edit-big {
-    min-height: 130px !important;
-    font-weight: normal; }
+    min-height: 130px !important; }
 
 .image-box {
   border-radius: 5px;
